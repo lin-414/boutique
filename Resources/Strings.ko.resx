@@ -1256,4 +1256,418 @@
   <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
     <value>배분 파일 자동 저장 제거됨</value>
   </data>
+  <data name="View_EntryDetails" xml:space="preserve">
+    <value>항목 세부 정보</value>
+  </data>
+  <data name="View_Filters" xml:space="preserve">
+    <value>필터</value>
+  </data>
+  <data name="View_SelectEntryHint" xml:space="preserve">
+    <value>목록에서 항목을 선택하여 세부 정보를 편집하세요</value>
+  </data>
+  <data name="View_ExclusiveGroupNameTooltip" xml:space="preserve">
+    <value>ExclusiveGroup 이름입니다.</value>
+  </data>
+  <data name="View_ExclusiveGroupFormsTooltip" xml:space="preserve">
+    <value>쉼표로 구분된 폼 목록입니다.</value>
+  </data>
+  <data name="View_FormsLabel" xml:space="preserve">
+    <value>폼:</value>
+  </data>
+  <data name="View_ChanceLabel" xml:space="preserve">
+    <value>확률:</value>
+  </data>
+  <data name="View_Traits" xml:space="preserve">
+    <value>특성</value>
+  </data>
+  <data name="View_GenderLabel" xml:space="preserve">
+    <value>성별:</value>
+  </data>
+  <data name="View_UniqueLabel" xml:space="preserve">
+    <value>고유:</value>
+  </data>
+  <data name="View_LevelLabel" xml:space="preserve">
+    <value>레벨:</value>
+  </data>
+  <data name="View_LevelNone" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="View_LevelLevel" xml:space="preserve">
+    <value>레벨</value>
+  </data>
+  <data name="View_LevelSkillLevel" xml:space="preserve">
+    <value>스킬 레벨</value>
+  </data>
+  <data name="View_LevelSkillWeight" xml:space="preserve">
+    <value>스킬 가중치</value>
+  </data>
+  <data name="View_LevelRaw" xml:space="preserve">
+    <value>원시</value>
+  </data>
+  <data name="View_Min" xml:space="preserve">
+    <value>최소</value>
+  </data>
+  <data name="View_Max" xml:space="preserve">
+    <value>최대</value>
+  </data>
+  <data name="View_ToggleNegationTooltip" xml:space="preserve">
+    <value>클릭하면 부정을 전환합니다</value>
+  </data>
+  <data name="View_AndOrLogicFormat" xml:space="preserve">
+    <value>AND: 모든 {0}이(가) 일치해야 함 | OR: 최소 하나의 {0}이(가) 일치해야 함</value>
+  </data>
+  <data name="View_OutfitFilters" xml:space="preserve">
+    <value>의상 필터</value>
+  </data>
+  <data name="View_RawFilters" xml:space="preserve">
+    <value>원시 필터</value>
+  </data>
+  <data name="View_StringLabel" xml:space="preserve">
+    <value>문자열:</value>
+  </data>
+  <data name="View_FormLabel" xml:space="preserve">
+    <value>폼:</value>
+  </data>
+  <data name="View_RawStringFiltersTooltip" xml:space="preserve">
+    <value>원시 문자열 필터: 와일드카드(*Mage), 부정(-Exclude), SPID 배포 키워드. 쉼표는 OR, 더하기는 AND입니다.</value>
+  </data>
+  <data name="View_RawFormFiltersTooltip" xml:space="preserve">
+    <value>원시 폼 필터: 부정된 팩션(-FactionName), 종족 등. 쉼표는 OR입니다.</value>
+  </data>
+  <data name="View_Results" xml:space="preserve">
+    <value>결과</value>
+  </data>
+  <data name="View_TotalNpcsFormat" xml:space="preserve">
+    <value>총 {0}명의 NPC</value>
+  </data>
+  <data name="View_Criteria" xml:space="preserve">
+    <value>기준</value>
+  </data>
+  <data name="View_TargetFormat" xml:space="preserve">
+    <value>대상: {0}</value>
+  </data>
+  <data name="View_TargetNone" xml:space="preserve">
+    <value>대상: (선택 없음)</value>
+  </data>
+  <data name="View_TargetOutfitsHint" xml:space="preserve">
+    <value>지정된 기존 의상을 착용한 NPC를 대상으로 하여 사실상 해당 의상을 대체합니다.</value>
+  </data>
+  <data name="View_AddSelectedOutfits" xml:space="preserve">
+    <value>선택한 의상 추가</value>
+  </data>
+  <data name="View_ShowingPrefix" xml:space="preserve">
+    <value>표시: </value>
+  </data>
+  <data name="View_OfSeparator" xml:space="preserve">
+    <value> / </value>
+  </data>
+  <data name="View_NpcsSuffix" xml:space="preserve">
+    <value>명의 NPC</value>
+  </data>
+  <data name="View_OutfitFileTooltip" xml:space="preserve">
+    <value>이 NPC의 의상을 결정하는 배포 파일</value>
+  </data>
+  <data name="View_ContainsLeveledLists" xml:space="preserve">
+    <value>레벨드 리스트 포함</value>
+  </data>
+  <data name="View_ContainsLeveledListsTooltip" xml:space="preserve">
+    <value>레벨드 리스트 또는 폼 리스트가 포함된 의상만 표시</value>
+  </data>
+  <data name="View_MoreActions" xml:space="preserve">
+    <value>추가 작업</value>
+  </data>
+  <data name="View_NpcCountFormat" xml:space="preserve">
+    <value>(NPC {0}명)</value>
+  </data>
+  <data name="View_UnresolvedFiltersTooltip" xml:space="preserve">
+    <value>이 항목에는 알려진 NPC 또는 키워드와 일치하지 않는 미해결 필터가 있습니다</value>
+  </data>
+  <data name="View_IntraFileOverlapsFormat" xml:space="preserve">
+    <value>파일 내 중복 {0}개</value>
+  </data>
+  <data name="View_ViewButton" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="View_ParseErrorsSuffix" xml:space="preserve">
+    <value>개의 구문 분석 오류 - 저장 시 이 줄이 유지됩니다</value>
+  </data>
+  <data name="View_Plugin" xml:space="preserve">
+    <value>플러그인</value>
+  </data>
+  <data name="View_ArValFormat" xml:space="preserve">
+    <value> (AR: {0:F0}, 값: {1})</value>
+  </data>
+  <data name="View_Overall" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="View_NpcCoverage" xml:space="preserve">
+    <value>NPC 커버리지</value>
+  </data>
+  <data name="View_ModUtilization" xml:space="preserve">
+    <value>모드 활용도</value>
+  </data>
+  <data name="View_OutfitVariety" xml:space="preserve">
+    <value>의상 다양성</value>
+  </data>
+  <data name="View_CalculateGrade" xml:space="preserve">
+    <value>등급 계산</value>
+  </data>
+  <data name="View_CoverageSummaryFormat" xml:space="preserve">
+    <value>{0:N0}/{1:N0}명의 NPC 커버 · {2:N0}/{3:N0}개의 모드 의상 사용 · {4:N0}개의 고유 의상</value>
+  </data>
+  <data name="View_ClickCalculateHint" xml:space="preserve">
+    <value>등급 계산을 클릭하여 배포 설정을 분석하세요</value>
+  </data>
+  <data name="View_SourceMods" xml:space="preserve">
+    <value>원본 모드</value>
+  </data>
+  <data name="View_UnusedOutfitsFormat" xml:space="preserve">
+    <value>사용되지 않는 모드 의상 ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsFormat" xml:space="preserve">
+    <value>어떤 의상에도 없는 방어구 ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsHint" xml:space="preserve">
+    <value>어떤 의상에도 포함되지 않은 모드의 착용 가능한 마법 없는 방어구입니다. 일부는 의도적으로 제작 전용일 수 있습니다.</value>
+  </data>
+  <data name="View_NotApplicable" xml:space="preserve">
+    <value>해당 없음</value>
+  </data>
+  <data name="View_HideEmptyContainers" xml:space="preserve">
+    <value>빈 컨테이너 숨기기</value>
+  </data>
+  <data name="View_CellLabel" xml:space="preserve">
+    <value>셀:</value>
+  </data>
+  <data name="View_RespawnsLabel" xml:space="preserve">
+    <value>리스폰:</value>
+  </data>
+  <data name="View_ItemsHeader" xml:space="preserve">
+    <value>아이템</value>
+  </data>
+  <data name="View_MerchantHeader" xml:space="preserve">
+    <value>상인</value>
+  </data>
+  <data name="View_CellsHeader" xml:space="preserve">
+    <value>셀</value>
+  </data>
+  <data name="View_RespawnsHeader" xml:space="preserve">
+    <value>리스폰</value>
+  </data>
+  <data name="View_ItemHeader" xml:space="preserve">
+    <value>아이템</value>
+  </data>
+  <data name="View_CountHeader" xml:space="preserve">
+    <value>수량</value>
+  </data>
+  <data name="View_SelectContainer" xml:space="preserve">
+    <value>컨테이너 선택</value>
+  </data>
+  <data name="View_SelectContainerHint" xml:space="preserve">
+    <value>컨테이너를 선택하면 내용이 표시됩니다</value>
+  </data>
+  <data name="View_PreviousOutfitTooltip" xml:space="preserve">
+    <value>이전 의상(왼쪽 화살표)</value>
+  </data>
+  <data name="View_NextOutfitTooltip" xml:space="preserve">
+    <value>다음 의상(오른쪽 화살표)</value>
+  </data>
+  <data name="View_LoadingPreview" xml:space="preserve">
+    <value>미리 보기 로드 중...</value>
+  </data>
+  <data name="View_LeveledItemsNotice" xml:space="preserve">
+    <value>이 의상에는 레벨드 리스트가 포함되어 있습니다.</value>
+  </data>
+  <data name="View_LeveledItemsHint" xml:space="preserve">
+    <value>게임 내 외형은 다를 수 있습니다. 무작위화를 클릭하면 다른 조합을 미리 볼 수 있습니다.</value>
+  </data>
+  <data name="View_Randomize" xml:space="preserve">
+    <value>무작위화</value>
+  </data>
+  <data name="View_ToggleTabTooltip" xml:space="preserve">
+    <value>Tab 키로 전환</value>
+  </data>
+  <data name="View_ShowBaseBody" xml:space="preserve">
+    <value>기본 바디 표시</value>
+  </data>
+  <data name="View_HideBaseBodyTooltip" xml:space="preserve">
+    <value>방어구를 뚫고 나올 때 기본 바디 메시를 숨깁니다</value>
+  </data>
+  <data name="View_OutfitCounterFormat" xml:space="preserve">
+    <value>의상 {0}/{1}</value>
+  </data>
+  <data name="View_UnknownOutfit" xml:space="preserve">
+    <value>알 수 없는 의상</value>
+  </data>
+  <data name="View_FromSourceFormat" xml:space="preserve">
+    <value>출처: {0}</value>
+  </data>
+  <data name="View_FromSourceWinnerFormat" xml:space="preserve">
+    <value>출처: {0} (승자)</value>
+  </data>
+  <data name="View_NoGeometry" xml:space="preserve">
+    <value>렌더링할 지오메트리가 없습니다.</value>
+  </data>
+  <data name="View_AutoUpdate" xml:space="preserve">
+    <value>자동 업데이트</value>
+  </data>
+  <data name="View_CheckUpdatesOnStartup" xml:space="preserve">
+    <value>시작 시 업데이트 확인</value>
+  </data>
+  <data name="View_CheckNow" xml:space="preserve">
+    <value>지금 확인</value>
+  </data>
+  <data name="View_Experimental" xml:space="preserve">
+    <value>실험적</value>
+  </data>
+  <data name="View_ShowContainersTab" xml:space="preserve">
+    <value>컨테이너 탭 표시(다시 시작 필요)</value>
+  </data>
+  <data name="View_DebugGroup" xml:space="preserve">
+    <value>디버그</value>
+  </data>
+  <data name="View_DebugLogging" xml:space="preserve">
+    <value>디버그 로깅</value>
+  </data>
+  <data name="View_EnableDebugLogging" xml:space="preserve">
+    <value>디버그 로깅 사용(다시 시작 필요)</value>
+  </data>
+  <data name="View_LogFiles" xml:space="preserve">
+    <value>로그 파일</value>
+  </data>
+  <data name="View_OpenTodaysLog" xml:space="preserve">
+    <value>오늘 로그 열기</value>
+  </data>
+  <data name="View_OpenLogsFolder" xml:space="preserve">
+    <value>로그 폴더 열기</value>
+  </data>
+  <data name="View_DragToReorder" xml:space="preserve">
+    <value>드래그하여 순서 변경</value>
+  </data>
+  <data name="View_ClickChangeIcon" xml:space="preserve">
+    <value>클릭하여 아이콘 변경</value>
+  </data>
+  <data name="View_ClickRename" xml:space="preserve">
+    <value>클릭하여 이름 변경</value>
+  </data>
+  <data name="View_RemoveSeparator" xml:space="preserve">
+    <value>구분 기호 제거</value>
+  </data>
+  <data name="View_TypeLabel" xml:space="preserve">
+    <value>유형:</value>
+  </data>
+  <data name="View_SlotLabel" xml:space="preserve">
+    <value>슬롯:</value>
+  </data>
+  <data name="View_AddSeparator" xml:space="preserve">
+    <value>+ 구분 기호</value>
+  </data>
+  <data name="View_AddSeparatorTooltip" xml:space="preserve">
+    <value>의상을 정리하기 위한 구분 기호를 추가합니다</value>
+  </data>
+  <data name="View_PiecesFormat" xml:space="preserve">
+    <value>({0}개 조각)</value>
+  </data>
+  <data name="View_ItemsCountFormat" xml:space="preserve">
+    <value>{0}개 항목</value>
+  </data>
+  <data name="View_UpdateAvailableTitle" xml:space="preserve">
+    <value>업데이트 사용 가능</value>
+  </data>
+  <data name="View_UpdateAvailableHeader" xml:space="preserve">
+    <value>Boutique의 새 버전을 사용할 수 있습니다!</value>
+  </data>
+  <data name="View_CurrentVersionLabel" xml:space="preserve">
+    <value>현재 버전: </value>
+  </data>
+  <data name="View_LatestVersionLabel" xml:space="preserve">
+    <value>최신 버전: </value>
+  </data>
+  <data name="View_WhatsNew" xml:space="preserve">
+    <value>새로운 기능</value>
+  </data>
+  <data name="View_SkipThisVersion" xml:space="preserve">
+    <value>이 버전 건너뛰기</value>
+  </data>
+  <data name="View_RemindMeLater" xml:space="preserve">
+    <value>나중에 알림</value>
+  </data>
+  <data name="View_UpdateNow" xml:space="preserve">
+    <value>지금 업데이트</value>
+  </data>
+  <data name="View_SelectIconTitle" xml:space="preserve">
+    <value>아이콘 선택</value>
+  </data>
+  <data name="View_FilterIcons" xml:space="preserve">
+    <value>아이콘 필터...</value>
+  </data>
+  <data name="View_ClearIcon" xml:space="preserve">
+    <value>아이콘 지우기</value>
+  </data>
+  <data name="View_Ok" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="View_InputTitle" xml:space="preserve">
+    <value>입력</value>
+  </data>
+  <data name="View_IntraFileOverlapsTitle" xml:space="preserve">
+    <value>파일 내 중복</value>
+  </data>
+  <data name="View_IntraFileOverlapsDescription" xml:space="preserve">
+    <value>의상 항목 간 공유되는 NPC 수입니다. 0이 아닌 셀은 여러 의상이 대상으로 하는 NPC를 나타냅니다.</value>
+  </data>
+  <data name="View_IntraFileOverlapsHeaderFormat" xml:space="preserve">
+    <value>여러 의상이 대상으로 하는 NPC: {0}명</value>
+  </data>
+  <data name="View_ConfirmRemoveMessage" xml:space="preserve">
+    <value>이 항목을 제거하시겠습니까?&#10;&#10;{0}</value>
+  </data>
+  <data name="View_ConfirmRemoveTitle" xml:space="preserve">
+    <value>제거 확인</value>
+  </data>
+  <data name="View_PatchCreatedTitle" xml:space="preserve">
+    <value>패치 생성됨</value>
+  </data>
+  <data name="View_OverwritePatchTitle" xml:space="preserve">
+    <value>기존 패치를 덮어쓰시겠습니까?</value>
+  </data>
+  <data name="View_ConfirmDeleteTitle" xml:space="preserve">
+    <value>삭제 확인</value>
+  </data>
+  <data name="View_CreateOutfitTitle" xml:space="preserve">
+    <value>의상 만들기</value>
+  </data>
+  <data name="View_MissingMastersSummaryFormat" xml:space="preserve">
+    <value>패치를 정리하면 {0}개의 의상이 제거됩니다. 이를 유지하려면 누락된 마스터 {1}개를 다시 추가해야 합니다.</value>
+  </data>
+  <data name="Distribution_AddSelectedLocations" xml:space="preserve">
+    <value>선택한 위치를 항목에 추가</value>
+  </data>
+  <data name="Distribution_Locations" xml:space="preserve">
+    <value>위치:</value>
+  </data>
+  <data name="Header_Type" xml:space="preserve">
+    <value>유형</value>
+  </data>
+  <data name="PatchNameCollision_Header" xml:space="preserve">
+    <value>⚠️ 이 이름은 기존 플러그인과 충돌합니다</value>
+  </data>
+  <data name="PatchNameCollision_KeepName" xml:space="preserve">
+    <value>이 이름 유지</value>
+  </data>
+  <data name="PatchNameCollision_Message" xml:space="preserve">
+    <value>"{0}"은(는) 로드 순서에 이미 있습니다. 이 이름을 사용하면 패치를 생성할 때 기존 데이터를 덮어쓸 수 있습니다. 고유한 이름을 선택하세요.</value>
+  </data>
+  <data name="PatchNameCollision_Revert" xml:space="preserve">
+    <value>다른 이름 선택</value>
+  </data>
+  <data name="PatchNameCollision_Title" xml:space="preserve">
+    <value>플러그인 이름 충돌</value>
+  </data>
+  <data name="Tab_Containers" xml:space="preserve">
+    <value>컨테이너</value>
+  </data>
+  <data name="Tab_Locations" xml:space="preserve">
+    <value>위치</value>
+  </data>
 </root>

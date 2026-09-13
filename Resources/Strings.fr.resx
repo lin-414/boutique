@@ -1256,4 +1256,418 @@
   <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
     <value>Enregistrement automatique des fichiers de distribution supprimé</value>
   </data>
+  <data name="View_EntryDetails" xml:space="preserve">
+    <value>Détails de l'entrée</value>
+  </data>
+  <data name="View_Filters" xml:space="preserve">
+    <value>Filtres</value>
+  </data>
+  <data name="View_SelectEntryHint" xml:space="preserve">
+    <value>Sélectionnez une entrée dans la liste pour modifier ses détails</value>
+  </data>
+  <data name="View_ExclusiveGroupNameTooltip" xml:space="preserve">
+    <value>Nom de l'ExclusiveGroup.</value>
+  </data>
+  <data name="View_ExclusiveGroupFormsTooltip" xml:space="preserve">
+    <value>Liste de forms séparées par des virgules.</value>
+  </data>
+  <data name="View_FormsLabel" xml:space="preserve">
+    <value>Forms :</value>
+  </data>
+  <data name="View_ChanceLabel" xml:space="preserve">
+    <value>Chance :</value>
+  </data>
+  <data name="View_Traits" xml:space="preserve">
+    <value>Traits</value>
+  </data>
+  <data name="View_GenderLabel" xml:space="preserve">
+    <value>Genre :</value>
+  </data>
+  <data name="View_UniqueLabel" xml:space="preserve">
+    <value>Unique :</value>
+  </data>
+  <data name="View_LevelLabel" xml:space="preserve">
+    <value>Niveau :</value>
+  </data>
+  <data name="View_LevelNone" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="View_LevelLevel" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="View_LevelSkillLevel" xml:space="preserve">
+    <value>Niveau de compétence</value>
+  </data>
+  <data name="View_LevelSkillWeight" xml:space="preserve">
+    <value>Poids de compétence</value>
+  </data>
+  <data name="View_LevelRaw" xml:space="preserve">
+    <value>Brut</value>
+  </data>
+  <data name="View_Min" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="View_Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="View_ToggleNegationTooltip" xml:space="preserve">
+    <value>Cliquez pour inverser la négation</value>
+  </data>
+  <data name="View_AndOrLogicFormat" xml:space="preserve">
+    <value>ET : Tous les {0} doivent correspondre | OU : Au moins un {0} doit correspondre</value>
+  </data>
+  <data name="View_OutfitFilters" xml:space="preserve">
+    <value>Filtres d'outfit</value>
+  </data>
+  <data name="View_RawFilters" xml:space="preserve">
+    <value>Filtres bruts</value>
+  </data>
+  <data name="View_StringLabel" xml:space="preserve">
+    <value>Chaîne :</value>
+  </data>
+  <data name="View_FormLabel" xml:space="preserve">
+    <value>Form :</value>
+  </data>
+  <data name="View_RawStringFiltersTooltip" xml:space="preserve">
+    <value>Filtres de chaîne bruts : caractères génériques (*Mage), négations (-Exclude) et mots-clés distribués par SPID. Virgule pour OU, plus pour ET.</value>
+  </data>
+  <data name="View_RawFormFiltersTooltip" xml:space="preserve">
+    <value>Filtres de form bruts : factions niées (-FactionName), races, etc. Virgule pour OU.</value>
+  </data>
+  <data name="View_Results" xml:space="preserve">
+    <value>Résultats</value>
+  </data>
+  <data name="View_TotalNpcsFormat" xml:space="preserve">
+    <value>Total : {0} PNJ</value>
+  </data>
+  <data name="View_Criteria" xml:space="preserve">
+    <value>Critères</value>
+  </data>
+  <data name="View_TargetFormat" xml:space="preserve">
+    <value>Cible : {0}</value>
+  </data>
+  <data name="View_TargetNone" xml:space="preserve">
+    <value>Cible : (aucune sélectionnée)</value>
+  </data>
+  <data name="View_TargetOutfitsHint" xml:space="preserve">
+    <value>Cible les PNJ portant un outfit existant donné, le remplaçant ainsi.</value>
+  </data>
+  <data name="View_AddSelectedOutfits" xml:space="preserve">
+    <value>Ajouter les outfits sélectionnés</value>
+  </data>
+  <data name="View_ShowingPrefix" xml:space="preserve">
+    <value>Affichage </value>
+  </data>
+  <data name="View_OfSeparator" xml:space="preserve">
+    <value> sur </value>
+  </data>
+  <data name="View_NpcsSuffix" xml:space="preserve">
+    <value> PNJ</value>
+  </data>
+  <data name="View_OutfitFileTooltip" xml:space="preserve">
+    <value>Le fichier de distribution déterminant l'outfit de ce PNJ</value>
+  </data>
+  <data name="View_ContainsLeveledLists" xml:space="preserve">
+    <value>Contient des listes étagées</value>
+  </data>
+  <data name="View_ContainsLeveledListsTooltip" xml:space="preserve">
+    <value>Afficher uniquement les outfits contenant des listes étagées ou des listes de forms</value>
+  </data>
+  <data name="View_MoreActions" xml:space="preserve">
+    <value>Plus d'actions</value>
+  </data>
+  <data name="View_NpcCountFormat" xml:space="preserve">
+    <value>({0} PNJ)</value>
+  </data>
+  <data name="View_UnresolvedFiltersTooltip" xml:space="preserve">
+    <value>Cette entrée contient des filtres non résolus n'ayant pu être associés à des PNJ ou mots-clés connus</value>
+  </data>
+  <data name="View_IntraFileOverlapsFormat" xml:space="preserve">
+    <value>{0} chevauchements intra-fichier</value>
+  </data>
+  <data name="View_ViewButton" xml:space="preserve">
+    <value>Afficher</value>
+  </data>
+  <data name="View_ParseErrorsSuffix" xml:space="preserve">
+    <value> erreur(s) d'analyse - ces lignes seront conservées lors de l'enregistrement</value>
+  </data>
+  <data name="View_Plugin" xml:space="preserve">
+    <value>Plugin</value>
+  </data>
+  <data name="View_ArValFormat" xml:space="preserve">
+    <value> (AR : {0:F0}, Val : {1})</value>
+  </data>
+  <data name="View_Overall" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="View_NpcCoverage" xml:space="preserve">
+    <value>Couverture des PNJ</value>
+  </data>
+  <data name="View_ModUtilization" xml:space="preserve">
+    <value>Utilisation des mods</value>
+  </data>
+  <data name="View_OutfitVariety" xml:space="preserve">
+    <value>Variété des outfits</value>
+  </data>
+  <data name="View_CalculateGrade" xml:space="preserve">
+    <value>Calculer la note</value>
+  </data>
+  <data name="View_CoverageSummaryFormat" xml:space="preserve">
+    <value>{0:N0}/{1:N0} PNJ couverts · {2:N0}/{3:N0} outfits de mods utilisés · {4:N0} outfits uniques</value>
+  </data>
+  <data name="View_ClickCalculateHint" xml:space="preserve">
+    <value>Cliquez sur Calculer la note pour analyser votre configuration de distribution</value>
+  </data>
+  <data name="View_SourceMods" xml:space="preserve">
+    <value>Mods sources</value>
+  </data>
+  <data name="View_UnusedOutfitsFormat" xml:space="preserve">
+    <value>Outfits de mods inutilisés ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsFormat" xml:space="preserve">
+    <value>Armures dans aucun outfit ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsHint" xml:space="preserve">
+    <value>Armures jouables et non enchantées de mods qu'aucun outfit n'accorde. Certaines sont peut-être réservées à l'artisanat.</value>
+  </data>
+  <data name="View_NotApplicable" xml:space="preserve">
+    <value>N/D</value>
+  </data>
+  <data name="View_HideEmptyContainers" xml:space="preserve">
+    <value>Masquer les conteneurs vides</value>
+  </data>
+  <data name="View_CellLabel" xml:space="preserve">
+    <value>Cellule :</value>
+  </data>
+  <data name="View_RespawnsLabel" xml:space="preserve">
+    <value>Réapparition :</value>
+  </data>
+  <data name="View_ItemsHeader" xml:space="preserve">
+    <value>Objets</value>
+  </data>
+  <data name="View_MerchantHeader" xml:space="preserve">
+    <value>Marchand</value>
+  </data>
+  <data name="View_CellsHeader" xml:space="preserve">
+    <value>Cellules</value>
+  </data>
+  <data name="View_RespawnsHeader" xml:space="preserve">
+    <value>Réapparition</value>
+  </data>
+  <data name="View_ItemHeader" xml:space="preserve">
+    <value>Objet</value>
+  </data>
+  <data name="View_CountHeader" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="View_SelectContainer" xml:space="preserve">
+    <value>Sélectionnez un conteneur</value>
+  </data>
+  <data name="View_SelectContainerHint" xml:space="preserve">
+    <value>Sélectionnez un conteneur pour voir son contenu</value>
+  </data>
+  <data name="View_PreviousOutfitTooltip" xml:space="preserve">
+    <value>Outfit précédent (flèche gauche)</value>
+  </data>
+  <data name="View_NextOutfitTooltip" xml:space="preserve">
+    <value>Outfit suivant (flèche droite)</value>
+  </data>
+  <data name="View_LoadingPreview" xml:space="preserve">
+    <value>Chargement de l'aperçu...</value>
+  </data>
+  <data name="View_LeveledItemsNotice" xml:space="preserve">
+    <value>Cet outfit contient des listes étagées.</value>
+  </data>
+  <data name="View_LeveledItemsHint" xml:space="preserve">
+    <value>L'apparence en jeu peut varier. Cliquez sur Aléatoire pour prévisualiser différentes combinaisons.</value>
+  </data>
+  <data name="View_Randomize" xml:space="preserve">
+    <value>Aléatoire</value>
+  </data>
+  <data name="View_ToggleTabTooltip" xml:space="preserve">
+    <value>Basculer avec la touche Tab</value>
+  </data>
+  <data name="View_ShowBaseBody" xml:space="preserve">
+    <value>Afficher le corps de base</value>
+  </data>
+  <data name="View_HideBaseBodyTooltip" xml:space="preserve">
+    <value>Masque le maillage du corps par défaut lorsqu'il traverse l'armure</value>
+  </data>
+  <data name="View_OutfitCounterFormat" xml:space="preserve">
+    <value>Outfit {0} sur {1}</value>
+  </data>
+  <data name="View_UnknownOutfit" xml:space="preserve">
+    <value>Outfit inconnu</value>
+  </data>
+  <data name="View_FromSourceFormat" xml:space="preserve">
+    <value>de {0}</value>
+  </data>
+  <data name="View_FromSourceWinnerFormat" xml:space="preserve">
+    <value>de {0} (gagnant)</value>
+  </data>
+  <data name="View_NoGeometry" xml:space="preserve">
+    <value>Aucune géométrie à afficher.</value>
+  </data>
+  <data name="View_AutoUpdate" xml:space="preserve">
+    <value>Mise à jour automatique</value>
+  </data>
+  <data name="View_CheckUpdatesOnStartup" xml:space="preserve">
+    <value>Rechercher les mises à jour au démarrage</value>
+  </data>
+  <data name="View_CheckNow" xml:space="preserve">
+    <value>Vérifier maintenant</value>
+  </data>
+  <data name="View_Experimental" xml:space="preserve">
+    <value>Expérimental</value>
+  </data>
+  <data name="View_ShowContainersTab" xml:space="preserve">
+    <value>Afficher l'onglet Conteneurs (redémarrage requis)</value>
+  </data>
+  <data name="View_DebugGroup" xml:space="preserve">
+    <value>Débogage</value>
+  </data>
+  <data name="View_DebugLogging" xml:space="preserve">
+    <value>Journalisation du débogage</value>
+  </data>
+  <data name="View_EnableDebugLogging" xml:space="preserve">
+    <value>Activer la journalisation du débogage (redémarrage requis)</value>
+  </data>
+  <data name="View_LogFiles" xml:space="preserve">
+    <value>Fichiers journaux</value>
+  </data>
+  <data name="View_OpenTodaysLog" xml:space="preserve">
+    <value>Ouvrir le journal du jour</value>
+  </data>
+  <data name="View_OpenLogsFolder" xml:space="preserve">
+    <value>Ouvrir le dossier des journaux</value>
+  </data>
+  <data name="View_DragToReorder" xml:space="preserve">
+    <value>Glisser pour réordonner</value>
+  </data>
+  <data name="View_ClickChangeIcon" xml:space="preserve">
+    <value>Cliquez pour changer l'icône</value>
+  </data>
+  <data name="View_ClickRename" xml:space="preserve">
+    <value>Cliquez pour renommer</value>
+  </data>
+  <data name="View_RemoveSeparator" xml:space="preserve">
+    <value>Supprimer le séparateur</value>
+  </data>
+  <data name="View_TypeLabel" xml:space="preserve">
+    <value>Type :</value>
+  </data>
+  <data name="View_SlotLabel" xml:space="preserve">
+    <value>Emplacement :</value>
+  </data>
+  <data name="View_AddSeparator" xml:space="preserve">
+    <value>+ Séparateur</value>
+  </data>
+  <data name="View_AddSeparatorTooltip" xml:space="preserve">
+    <value>Ajoute un séparateur pour organiser les outfits</value>
+  </data>
+  <data name="View_PiecesFormat" xml:space="preserve">
+    <value>({0} pièces)</value>
+  </data>
+  <data name="View_ItemsCountFormat" xml:space="preserve">
+    <value>{0} élément(s)</value>
+  </data>
+  <data name="View_UpdateAvailableTitle" xml:space="preserve">
+    <value>Mise à jour disponible</value>
+  </data>
+  <data name="View_UpdateAvailableHeader" xml:space="preserve">
+    <value>Une nouvelle version de Boutique est disponible !</value>
+  </data>
+  <data name="View_CurrentVersionLabel" xml:space="preserve">
+    <value>Version actuelle : </value>
+  </data>
+  <data name="View_LatestVersionLabel" xml:space="preserve">
+    <value>Dernière version : </value>
+  </data>
+  <data name="View_WhatsNew" xml:space="preserve">
+    <value>Nouveautés</value>
+  </data>
+  <data name="View_SkipThisVersion" xml:space="preserve">
+    <value>Ignorer cette version</value>
+  </data>
+  <data name="View_RemindMeLater" xml:space="preserve">
+    <value>Me le rappeler plus tard</value>
+  </data>
+  <data name="View_UpdateNow" xml:space="preserve">
+    <value>Mettre à jour maintenant</value>
+  </data>
+  <data name="View_SelectIconTitle" xml:space="preserve">
+    <value>Sélectionner une icône</value>
+  </data>
+  <data name="View_FilterIcons" xml:space="preserve">
+    <value>Filtrer les icônes...</value>
+  </data>
+  <data name="View_ClearIcon" xml:space="preserve">
+    <value>Effacer l'icône</value>
+  </data>
+  <data name="View_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="View_InputTitle" xml:space="preserve">
+    <value>Saisie</value>
+  </data>
+  <data name="View_IntraFileOverlapsTitle" xml:space="preserve">
+    <value>Chevauchements intra-fichier</value>
+  </data>
+  <data name="View_IntraFileOverlapsDescription" xml:space="preserve">
+    <value>Dénombrements de PNJ partagés entre entrées d'outfit. Les cellules non nulles indiquent des PNJ ciblés par plusieurs outfits.</value>
+  </data>
+  <data name="View_IntraFileOverlapsHeaderFormat" xml:space="preserve">
+    <value>{0} PNJ ciblés par plusieurs outfits</value>
+  </data>
+  <data name="View_ConfirmRemoveMessage" xml:space="preserve">
+    <value>Voulez-vous vraiment supprimer cette entrée ?&#10;&#10;{0}</value>
+  </data>
+  <data name="View_ConfirmRemoveTitle" xml:space="preserve">
+    <value>Confirmer la suppression</value>
+  </data>
+  <data name="View_PatchCreatedTitle" xml:space="preserve">
+    <value>Patch créé</value>
+  </data>
+  <data name="View_OverwritePatchTitle" xml:space="preserve">
+    <value>Écraser le patch existant ?</value>
+  </data>
+  <data name="View_ConfirmDeleteTitle" xml:space="preserve">
+    <value>Confirmer la suppression</value>
+  </data>
+  <data name="View_CreateOutfitTitle" xml:space="preserve">
+    <value>Créer un outfit</value>
+  </data>
+  <data name="View_MissingMastersSummaryFormat" xml:space="preserve">
+    <value>{0} outfit(s) seront supprimés si vous nettoyez le patch. {1} master(s) manquant(s) doivent être rajoutés pour les conserver.</value>
+  </data>
+  <data name="Distribution_AddSelectedLocations" xml:space="preserve">
+    <value>Ajouter les lieux sélectionnés à l'entrée</value>
+  </data>
+  <data name="Distribution_Locations" xml:space="preserve">
+    <value>Lieux :</value>
+  </data>
+  <data name="Header_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="PatchNameCollision_Header" xml:space="preserve">
+    <value>⚠️ Ce nom entre en conflit avec un plugin existant</value>
+  </data>
+  <data name="PatchNameCollision_KeepName" xml:space="preserve">
+    <value>Garder ce nom</value>
+  </data>
+  <data name="PatchNameCollision_Message" xml:space="preserve">
+    <value>"{0}" existe déjà dans votre load order. Utiliser ce nom risque d'écraser des données existantes lors de la création d'un patch. Envisagez de choisir un nom unique.</value>
+  </data>
+  <data name="PatchNameCollision_Revert" xml:space="preserve">
+    <value>Choisir un autre nom</value>
+  </data>
+  <data name="PatchNameCollision_Title" xml:space="preserve">
+    <value>Conflit de nom de plugin</value>
+  </data>
+  <data name="Tab_Containers" xml:space="preserve">
+    <value>Conteneurs</value>
+  </data>
+  <data name="Tab_Locations" xml:space="preserve">
+    <value>Lieux</value>
+  </data>
 </root>

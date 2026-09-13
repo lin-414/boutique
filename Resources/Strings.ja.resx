@@ -1256,4 +1256,418 @@
   <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
     <value>分布ファイルの自動保存の廃止</value>
   </data>
+  <data name="View_EntryDetails" xml:space="preserve">
+    <value>エントリの詳細</value>
+  </data>
+  <data name="View_Filters" xml:space="preserve">
+    <value>フィルター</value>
+  </data>
+  <data name="View_SelectEntryHint" xml:space="preserve">
+    <value>リストからエントリを選択して詳細を編集します</value>
+  </data>
+  <data name="View_ExclusiveGroupNameTooltip" xml:space="preserve">
+    <value>ExclusiveGroup の名前。</value>
+  </data>
+  <data name="View_ExclusiveGroupFormsTooltip" xml:space="preserve">
+    <value>コンマ区切りのフォーム リスト。</value>
+  </data>
+  <data name="View_FormsLabel" xml:space="preserve">
+    <value>フォーム:</value>
+  </data>
+  <data name="View_ChanceLabel" xml:space="preserve">
+    <value>確率:</value>
+  </data>
+  <data name="View_Traits" xml:space="preserve">
+    <value>特性</value>
+  </data>
+  <data name="View_GenderLabel" xml:space="preserve">
+    <value>性別:</value>
+  </data>
+  <data name="View_UniqueLabel" xml:space="preserve">
+    <value>ユニーク:</value>
+  </data>
+  <data name="View_LevelLabel" xml:space="preserve">
+    <value>レベル:</value>
+  </data>
+  <data name="View_LevelNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="View_LevelLevel" xml:space="preserve">
+    <value>レベル</value>
+  </data>
+  <data name="View_LevelSkillLevel" xml:space="preserve">
+    <value>スキル レベル</value>
+  </data>
+  <data name="View_LevelSkillWeight" xml:space="preserve">
+    <value>スキル重量</value>
+  </data>
+  <data name="View_LevelRaw" xml:space="preserve">
+    <value>生値</value>
+  </data>
+  <data name="View_Min" xml:space="preserve">
+    <value>最小</value>
+  </data>
+  <data name="View_Max" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="View_ToggleNegationTooltip" xml:space="preserve">
+    <value>クリックで否定を切り替え</value>
+  </data>
+  <data name="View_AndOrLogicFormat" xml:space="preserve">
+    <value>AND: すべての{0}が一致する必要があります | OR: 少なくとも 1 つの{0}が一致する必要があります</value>
+  </data>
+  <data name="View_OutfitFilters" xml:space="preserve">
+    <value>装備フィルター</value>
+  </data>
+  <data name="View_RawFilters" xml:space="preserve">
+    <value>生フィルター</value>
+  </data>
+  <data name="View_StringLabel" xml:space="preserve">
+    <value>文字列:</value>
+  </data>
+  <data name="View_FormLabel" xml:space="preserve">
+    <value>フォーム:</value>
+  </data>
+  <data name="View_RawStringFiltersTooltip" xml:space="preserve">
+    <value>生文字列フィルター: ワイルドカード (*Mage)、否定 (-Exclude)、SPID 配布キーワード。コンマで OR、プラスで AND。</value>
+  </data>
+  <data name="View_RawFormFiltersTooltip" xml:space="preserve">
+    <value>生フォーム フィルター: 否定ファクション (-FactionName)、種族など。コンマで OR。</value>
+  </data>
+  <data name="View_Results" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="View_TotalNpcsFormat" xml:space="preserve">
+    <value>合計: {0} 人の NPC</value>
+  </data>
+  <data name="View_Criteria" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="View_TargetFormat" xml:space="preserve">
+    <value>ターゲット: {0}</value>
+  </data>
+  <data name="View_TargetNone" xml:space="preserve">
+    <value>ターゲット: (未選択)</value>
+  </data>
+  <data name="View_TargetOutfitsHint" xml:space="preserve">
+    <value>特定の既存装備を着ている NPC をターゲットにし、実質的にそれを置き換えます。</value>
+  </data>
+  <data name="View_AddSelectedOutfits" xml:space="preserve">
+    <value>選択した装備を追加</value>
+  </data>
+  <data name="View_ShowingPrefix" xml:space="preserve">
+    <value>表示: </value>
+  </data>
+  <data name="View_OfSeparator" xml:space="preserve">
+    <value> / </value>
+  </data>
+  <data name="View_NpcsSuffix" xml:space="preserve">
+    <value> 人の NPC</value>
+  </data>
+  <data name="View_OutfitFileTooltip" xml:space="preserve">
+    <value>この NPC の装備を決定するディストリビューション ファイル</value>
+  </data>
+  <data name="View_ContainsLeveledLists" xml:space="preserve">
+    <value>リスト状リストを含む</value>
+  </data>
+  <data name="View_ContainsLeveledListsTooltip" xml:space="preserve">
+    <value>レベルド リストまたはフォーム リストを含む装備のみを表示</value>
+  </data>
+  <data name="View_MoreActions" xml:space="preserve">
+    <value>その他の操作</value>
+  </data>
+  <data name="View_NpcCountFormat" xml:space="preserve">
+    <value>({0} 人の NPC)</value>
+  </data>
+  <data name="View_UnresolvedFiltersTooltip" xml:space="preserve">
+    <value>このエントリには、既知の NPC やキーワードに一致できなかった未解決のフィルターがあります</value>
+  </data>
+  <data name="View_IntraFileOverlapsFormat" xml:space="preserve">
+    <value>{0} 件のファイル内重複</value>
+  </data>
+  <data name="View_ViewButton" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="View_ParseErrorsSuffix" xml:space="preserve">
+    <value> 件の解析エラー - これらの行は保存時に保持されます</value>
+  </data>
+  <data name="View_Plugin" xml:space="preserve">
+    <value>プラグイン</value>
+  </data>
+  <data name="View_ArValFormat" xml:space="preserve">
+    <value> (AR: {0:F0}, 値: {1})</value>
+  </data>
+  <data name="View_Overall" xml:space="preserve">
+    <value>総合</value>
+  </data>
+  <data name="View_NpcCoverage" xml:space="preserve">
+    <value>NPC カバレッジ</value>
+  </data>
+  <data name="View_ModUtilization" xml:space="preserve">
+    <value>Mod 利用率</value>
+  </data>
+  <data name="View_OutfitVariety" xml:space="preserve">
+    <value>装備の多様性</value>
+  </data>
+  <data name="View_CalculateGrade" xml:space="preserve">
+    <value>評価を計算</value>
+  </data>
+  <data name="View_CoverageSummaryFormat" xml:space="preserve">
+    <value>{0:N0}/{1:N0} 人の NPC をカバー · {2:N0}/{3:N0} の Mod 装備を使用 · {4:N0} の一意な装備</value>
+  </data>
+  <data name="View_ClickCalculateHint" xml:space="preserve">
+    <value>「評価を計算」をクリックしてディストリビューション設定を分析します</value>
+  </data>
+  <data name="View_SourceMods" xml:space="preserve">
+    <value>ソース Mod</value>
+  </data>
+  <data name="View_UnusedOutfitsFormat" xml:space="preserve">
+    <value>未使用の Mod 装備 ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsFormat" xml:space="preserve">
+    <value>どの装備にも含まれない防具 ({0})</value>
+  </data>
+  <data name="View_UnusedArmorsHint" xml:space="preserve">
+    <value>どの装備にも付与されていない、Mod 由来の着用可能な未付与防具。一部は意図的に作成限定の場合があります。</value>
+  </data>
+  <data name="View_NotApplicable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="View_HideEmptyContainers" xml:space="preserve">
+    <value>空のコンテナーを非表示</value>
+  </data>
+  <data name="View_CellLabel" xml:space="preserve">
+    <value>セル:</value>
+  </data>
+  <data name="View_RespawnsLabel" xml:space="preserve">
+    <value>リスポーン:</value>
+  </data>
+  <data name="View_ItemsHeader" xml:space="preserve">
+    <value>アイテム</value>
+  </data>
+  <data name="View_MerchantHeader" xml:space="preserve">
+    <value>商人</value>
+  </data>
+  <data name="View_CellsHeader" xml:space="preserve">
+    <value>セル</value>
+  </data>
+  <data name="View_RespawnsHeader" xml:space="preserve">
+    <value>リスポーン</value>
+  </data>
+  <data name="View_ItemHeader" xml:space="preserve">
+    <value>アイテム</value>
+  </data>
+  <data name="View_CountHeader" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="View_SelectContainer" xml:space="preserve">
+    <value>コンテナーを選択</value>
+  </data>
+  <data name="View_SelectContainerHint" xml:space="preserve">
+    <value>コンテナーを選択すると内容が表示されます</value>
+  </data>
+  <data name="View_PreviousOutfitTooltip" xml:space="preserve">
+    <value>前の装備 (左矢印)</value>
+  </data>
+  <data name="View_NextOutfitTooltip" xml:space="preserve">
+    <value>次の装備 (右矢印)</value>
+  </data>
+  <data name="View_LoadingPreview" xml:space="preserve">
+    <value>プレビューを読み込み中...</value>
+  </data>
+  <data name="View_LeveledItemsNotice" xml:space="preserve">
+    <value>この装備にはレベルド リストが含まれています。</value>
+  </data>
+  <data name="View_LeveledItemsHint" xml:space="preserve">
+    <value>ゲーム内の見た目は異なる場合があります。「ランダム化」をクリックすると別の組み合わせをプレビューできます。</value>
+  </data>
+  <data name="View_Randomize" xml:space="preserve">
+    <value>ランダム化</value>
+  </data>
+  <data name="View_ToggleTabTooltip" xml:space="preserve">
+    <value>Tab キーで切り替え</value>
+  </data>
+  <data name="View_ShowBaseBody" xml:space="preserve">
+    <value>ベース ボディを表示</value>
+  </data>
+  <data name="View_HideBaseBodyTooltip" xml:space="preserve">
+    <value>防具を貫通する場合に既定のボディ メッシュを非表示にします</value>
+  </data>
+  <data name="View_OutfitCounterFormat" xml:space="preserve">
+    <value>装備 {0}/{1}</value>
+  </data>
+  <data name="View_UnknownOutfit" xml:space="preserve">
+    <value>不明な装備</value>
+  </data>
+  <data name="View_FromSourceFormat" xml:space="preserve">
+    <value>来源: {0}</value>
+  </data>
+  <data name="View_FromSourceWinnerFormat" xml:space="preserve">
+    <value>来源: {0} (勝者)</value>
+  </data>
+  <data name="View_NoGeometry" xml:space="preserve">
+    <value>レンダリング可能なジオメトリがありません。</value>
+  </data>
+  <data name="View_AutoUpdate" xml:space="preserve">
+    <value>自動更新</value>
+  </data>
+  <data name="View_CheckUpdatesOnStartup" xml:space="preserve">
+    <value>起動時に更新を確認</value>
+  </data>
+  <data name="View_CheckNow" xml:space="preserve">
+    <value>今すぐ確認</value>
+  </data>
+  <data name="View_Experimental" xml:space="preserve">
+    <value>試験運用</value>
+  </data>
+  <data name="View_ShowContainersTab" xml:space="preserve">
+    <value>[コンテナー] タブを表示 (再起動が必要)</value>
+  </data>
+  <data name="View_DebugGroup" xml:space="preserve">
+    <value>デバッグ</value>
+  </data>
+  <data name="View_DebugLogging" xml:space="preserve">
+    <value>デバッグ ログ</value>
+  </data>
+  <data name="View_EnableDebugLogging" xml:space="preserve">
+    <value>デバッグ ログを有効化 (再起動が必要)</value>
+  </data>
+  <data name="View_LogFiles" xml:space="preserve">
+    <value>ログ ファイル</value>
+  </data>
+  <data name="View_OpenTodaysLog" xml:space="preserve">
+    <value>今日のログを開く</value>
+  </data>
+  <data name="View_OpenLogsFolder" xml:space="preserve">
+    <value>ログ フォルダーを開く</value>
+  </data>
+  <data name="View_DragToReorder" xml:space="preserve">
+    <value>ドラッグで並べ替え</value>
+  </data>
+  <data name="View_ClickChangeIcon" xml:space="preserve">
+    <value>クリックでアイコンを変更</value>
+  </data>
+  <data name="View_ClickRename" xml:space="preserve">
+    <value>クリックで名前を変更</value>
+  </data>
+  <data name="View_RemoveSeparator" xml:space="preserve">
+    <value>区切りを削除</value>
+  </data>
+  <data name="View_TypeLabel" xml:space="preserve">
+    <value>種類:</value>
+  </data>
+  <data name="View_SlotLabel" xml:space="preserve">
+    <value>スロット:</value>
+  </data>
+  <data name="View_AddSeparator" xml:space="preserve">
+    <value>+ 区切り</value>
+  </data>
+  <data name="View_AddSeparatorTooltip" xml:space="preserve">
+    <value>装備を整理するための区切りを追加</value>
+  </data>
+  <data name="View_PiecesFormat" xml:space="preserve">
+    <value>({0} 点)</value>
+  </data>
+  <data name="View_ItemsCountFormat" xml:space="preserve">
+    <value>{0} 項目</value>
+  </data>
+  <data name="View_UpdateAvailableTitle" xml:space="preserve">
+    <value>利用可能な更新</value>
+  </data>
+  <data name="View_UpdateAvailableHeader" xml:space="preserve">
+    <value>Boutique の新しいバージョンが利用可能です!</value>
+  </data>
+  <data name="View_CurrentVersionLabel" xml:space="preserve">
+    <value>現在のバージョン: </value>
+  </data>
+  <data name="View_LatestVersionLabel" xml:space="preserve">
+    <value>最新バージョン: </value>
+  </data>
+  <data name="View_WhatsNew" xml:space="preserve">
+    <value>新機能</value>
+  </data>
+  <data name="View_SkipThisVersion" xml:space="preserve">
+    <value>このバージョンをスキップ</value>
+  </data>
+  <data name="View_RemindMeLater" xml:space="preserve">
+    <value>後で通知</value>
+  </data>
+  <data name="View_UpdateNow" xml:space="preserve">
+    <value>今すぐ更新</value>
+  </data>
+  <data name="View_SelectIconTitle" xml:space="preserve">
+    <value>アイコンを選択</value>
+  </data>
+  <data name="View_FilterIcons" xml:space="preserve">
+    <value>アイコンをフィルター...</value>
+  </data>
+  <data name="View_ClearIcon" xml:space="preserve">
+    <value>アイコンを解除</value>
+  </data>
+  <data name="View_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="View_InputTitle" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="View_IntraFileOverlapsTitle" xml:space="preserve">
+    <value>ファイル内重複</value>
+  </data>
+  <data name="View_IntraFileOverlapsDescription" xml:space="preserve">
+    <value>装備エントリ間で共有される NPC 数。0 以外のセルは複数の装備の対象となる NPC を示します。</value>
+  </data>
+  <data name="View_IntraFileOverlapsHeaderFormat" xml:space="preserve">
+    <value>複数の装備の対象となっている NPC: {0} 人</value>
+  </data>
+  <data name="View_ConfirmRemoveMessage" xml:space="preserve">
+    <value>このエントリを削除してもよろしいですか？&#10;&#10;{0}</value>
+  </data>
+  <data name="View_ConfirmRemoveTitle" xml:space="preserve">
+    <value>削除の確認</value>
+  </data>
+  <data name="View_PatchCreatedTitle" xml:space="preserve">
+    <value>パッチ作成完了</value>
+  </data>
+  <data name="View_OverwritePatchTitle" xml:space="preserve">
+    <value>既存のパッチを上書きしますか？</value>
+  </data>
+  <data name="View_ConfirmDeleteTitle" xml:space="preserve">
+    <value>削除の確認</value>
+  </data>
+  <data name="View_CreateOutfitTitle" xml:space="preserve">
+    <value>装備を作成</value>
+  </data>
+  <data name="View_MissingMastersSummaryFormat" xml:space="preserve">
+    <value>パッチをクリーンアップすると {0} 件の装備が削除されます。保持するには、不足しているマスター {1} 件を再び追加する必要があります。</value>
+  </data>
+  <data name="Distribution_AddSelectedLocations" xml:space="preserve">
+    <value>選択した場所をエントリに追加</value>
+  </data>
+  <data name="Distribution_Locations" xml:space="preserve">
+    <value>場所:</value>
+  </data>
+  <data name="Header_Type" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="PatchNameCollision_Header" xml:space="preserve">
+    <value>⚠️ この名前は既存のプラグインと競合しています</value>
+  </data>
+  <data name="PatchNameCollision_KeepName" xml:space="preserve">
+    <value>この名前を使用</value>
+  </data>
+  <data name="PatchNameCollision_Message" xml:space="preserve">
+    <value>"{0}" はロード オーダーに既に存在します。この名前を使用すると、パッチ作成時に既存のデータが上書きされる可能性があります。一意の名前を選択してください。</value>
+  </data>
+  <data name="PatchNameCollision_Revert" xml:space="preserve">
+    <value>別の名前を選択</value>
+  </data>
+  <data name="PatchNameCollision_Title" xml:space="preserve">
+    <value>プラグイン名の競合</value>
+  </data>
+  <data name="Tab_Containers" xml:space="preserve">
+    <value>コンテナー</value>
+  </data>
+  <data name="Tab_Locations" xml:space="preserve">
+    <value>場所</value>
+  </data>
 </root>

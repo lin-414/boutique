@@ -481,4 +481,153 @@ public static class LocalizationKeys
     public const string AutosaveNoticeBody            = "Msg_AutosaveNoticeBody";
     public const string AutosaveNoticeTitle           = "Msg_AutosaveNoticeTitle";
   }
+
+  public static class View
+  {
+    // Entry editor (DistributionEntryEditorView)
+    public const string EntryDetails               = "View_EntryDetails";
+    public const string Filters                    = "View_Filters";
+    public const string SelectEntryHint            = "View_SelectEntryHint";
+    public const string ExclusiveGroupNameTooltip  = "View_ExclusiveGroupNameTooltip";
+    public const string ExclusiveGroupFormsTooltip = "View_ExclusiveGroupFormsTooltip";
+    public const string FormsLabel                 = "View_FormsLabel";
+    public const string ChanceLabel                = "View_ChanceLabel";
+    public const string Traits                     = "View_Traits";
+    public const string GenderLabel                = "View_GenderLabel";
+    public const string UniqueLabel                = "View_UniqueLabel";
+    public const string LevelLabel                 = "View_LevelLabel";
+    public const string LevelNone                  = "View_LevelNone";
+    public const string LevelLevel                 = "View_LevelLevel";
+    public const string LevelSkillLevel            = "View_LevelSkillLevel";
+    public const string LevelSkillWeight           = "View_LevelSkillWeight";
+    public const string LevelRaw                   = "View_LevelRaw";
+    public const string Min                        = "View_Min";
+    public const string Max                        = "View_Max";
+    public const string ToggleNegationTooltip      = "View_ToggleNegationTooltip";
+    public const string AndOrLogicFormat           = "View_AndOrLogicFormat";
+    public const string OutfitFilters              = "View_OutfitFilters";
+    public const string RawFilters                 = "View_RawFilters";
+    public const string StringLabel                = "View_StringLabel";
+    public const string FormLabel                  = "View_FormLabel";
+    public const string RawStringFiltersTooltip    = "View_RawStringFiltersTooltip";
+    public const string RawFormFiltersTooltip      = "View_RawFormFiltersTooltip";
+    public const string Results                    = "View_Results";
+    public const string TotalNpcsFormat            = "View_TotalNpcsFormat";
+    public const string Criteria                   = "View_Criteria";
+
+    // Filter tabs / NPC / Outfits / Entry list / File preview
+    public const string TargetFormat                 = "View_TargetFormat";
+    public const string TargetNone                   = "View_TargetNone";
+    public const string TargetOutfitsHint            = "View_TargetOutfitsHint";
+    public const string AddSelectedOutfits           = "View_AddSelectedOutfits";
+    public const string ShowingPrefix                = "View_ShowingPrefix";
+    public const string OfSeparator                  = "View_OfSeparator";
+    public const string NpcsSuffix                   = "View_NpcsSuffix";
+    public const string OutfitFileTooltip            = "View_OutfitFileTooltip";
+    public const string ContainsLeveledLists         = "View_ContainsLeveledLists";
+    public const string ContainsLeveledListsTooltip  = "View_ContainsLeveledListsTooltip";
+    public const string MoreActions                  = "View_MoreActions";
+    public const string NpcCountFormat               = "View_NpcCountFormat";
+    public const string UnresolvedFiltersTooltip     = "View_UnresolvedFiltersTooltip";
+    public const string IntraFileOverlapsFormat      = "View_IntraFileOverlapsFormat";
+    public const string ViewButton                   = "View_ViewButton";
+    public const string ParseErrorsSuffix            = "View_ParseErrorsSuffix";
+    public const string Plugin                       = "View_Plugin";
+    public const string ArValFormat                  = "View_ArValFormat";
+
+    // Report card (DistributionReportCardTabView)
+    public const string Overall                 = "View_Overall";
+    public const string NpcCoverage             = "View_NpcCoverage";
+    public const string ModUtilization          = "View_ModUtilization";
+    public const string OutfitVariety           = "View_OutfitVariety";
+    public const string CalculateGrade          = "View_CalculateGrade";
+    public const string CoverageSummaryFormat   = "View_CoverageSummaryFormat";
+    public const string ClickCalculateHint      = "View_ClickCalculateHint";
+    public const string SourceMods              = "View_SourceMods";
+    public const string UnusedOutfitsFormat     = "View_UnusedOutfitsFormat";
+    public const string UnusedArmorsFormat      = "View_UnusedArmorsFormat";
+    public const string UnusedArmorsHint        = "View_UnusedArmorsHint";
+    public const string NotApplicable           = "View_NotApplicable";
+
+    // Containers tab (DistributionContainersTabView)
+    public const string HideEmptyContainers = "View_HideEmptyContainers";
+    public const string CellLabel           = "View_CellLabel";
+    public const string RespawnsLabel       = "View_RespawnsLabel";
+    public const string ItemsHeader         = "View_ItemsHeader";
+    public const string MerchantHeader      = "View_MerchantHeader";
+    public const string CellsHeader         = "View_CellsHeader";
+    public const string RespawnsHeader      = "View_RespawnsHeader";
+    public const string ItemHeader          = "View_ItemHeader";
+    public const string CountHeader         = "View_CountHeader";
+    public const string SelectContainer     = "View_SelectContainer";
+    public const string SelectContainerHint = "View_SelectContainerHint";
+
+    // Preview window (OutfitPreviewWindow)
+    public const string PreviousOutfitTooltip = "View_PreviousOutfitTooltip";
+    public const string NextOutfitTooltip     = "View_NextOutfitTooltip";
+    public const string LoadingPreview        = "View_LoadingPreview";
+    public const string LeveledItemsNotice    = "View_LeveledItemsNotice";
+    public const string LeveledItemsHint      = "View_LeveledItemsHint";
+    public const string Randomize             = "View_Randomize";
+    public const string ToggleTabTooltip      = "View_ToggleTabTooltip";
+    public const string ShowBaseBody          = "View_ShowBaseBody";
+    public const string HideBaseBodyTooltip   = "View_HideBaseBodyTooltip";
+    public const string OutfitCounterFormat   = "View_OutfitCounterFormat";
+    public const string UnknownOutfit         = "View_UnknownOutfit";
+    public const string FromSourceFormat      = "View_FromSourceFormat";
+    public const string FromSourceWinnerFormat = "View_FromSourceWinnerFormat";
+    public const string NoGeometry            = "View_NoGeometry";
+
+    // Settings panel (SettingsPanelView)
+    public const string AutoUpdate            = "View_AutoUpdate";
+    public const string CheckUpdatesOnStartup = "View_CheckUpdatesOnStartup";
+    public const string CheckNow              = "View_CheckNow";
+    public const string Experimental          = "View_Experimental";
+    public const string ShowContainersTab     = "View_ShowContainersTab";
+    public const string DebugGroup            = "View_DebugGroup";
+    public const string DebugLogging          = "View_DebugLogging";
+    public const string EnableDebugLogging    = "View_EnableDebugLogging";
+    public const string LogFiles              = "View_LogFiles";
+    public const string OpenTodaysLog         = "View_OpenTodaysLog";
+    public const string OpenLogsFolder        = "View_OpenLogsFolder";
+
+    // Outfit creator (OutfitCreatorView)
+    public const string DragToReorder       = "View_DragToReorder";
+    public const string ClickChangeIcon     = "View_ClickChangeIcon";
+    public const string ClickRename         = "View_ClickRename";
+    public const string RemoveSeparator     = "View_RemoveSeparator";
+    public const string TypeLabel           = "View_TypeLabel";
+    public const string SlotLabel           = "View_SlotLabel";
+    public const string AddSeparator        = "View_AddSeparator";
+    public const string AddSeparatorTooltip = "View_AddSeparatorTooltip";
+    public const string PiecesFormat        = "View_PiecesFormat";
+    public const string ItemsCountFormat    = "View_ItemsCountFormat";
+
+    // Update dialog (UpdateDialog)
+    public const string UpdateAvailableTitle  = "View_UpdateAvailableTitle";
+    public const string UpdateAvailableHeader = "View_UpdateAvailableHeader";
+    public const string CurrentVersionLabel   = "View_CurrentVersionLabel";
+    public const string LatestVersionLabel    = "View_LatestVersionLabel";
+    public const string WhatsNew              = "View_WhatsNew";
+    public const string SkipThisVersion       = "View_SkipThisVersion";
+    public const string RemindMeLater         = "View_RemindMeLater";
+    public const string UpdateNow             = "View_UpdateNow";
+
+    // Misc dialogs
+    public const string SelectIconTitle                 = "View_SelectIconTitle";
+    public const string FilterIcons                     = "View_FilterIcons";
+    public const string ClearIcon                       = "View_ClearIcon";
+    public const string Ok                              = "View_Ok";
+    public const string InputTitle                      = "View_InputTitle";
+    public const string IntraFileOverlapsTitle          = "View_IntraFileOverlapsTitle";
+    public const string IntraFileOverlapsDescription    = "View_IntraFileOverlapsDescription";
+    public const string IntraFileOverlapsHeaderFormat   = "View_IntraFileOverlapsHeaderFormat";
+    public const string ConfirmRemoveMessage            = "View_ConfirmRemoveMessage";
+    public const string ConfirmRemoveTitle              = "View_ConfirmRemoveTitle";
+    public const string PatchCreatedTitle               = "View_PatchCreatedTitle";
+    public const string OverwritePatchTitle             = "View_OverwritePatchTitle";
+    public const string ConfirmDeleteTitle              = "View_ConfirmDeleteTitle";
+    public const string CreateOutfitTitle               = "View_CreateOutfitTitle";
+    public const string MissingMastersSummaryFormat     = "View_MissingMastersSummaryFormat";
+  }
 }

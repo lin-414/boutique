@@ -52,8 +52,15 @@
           </DataGrid>
           <StackPanel Grid.Row="2" Margin="0,6,0,0">
             <TextBlock
-              Text="{Binding SelectedEntry.TargetDisplayName, StringFormat='Target: {0}', FallbackValue='Target: (None selected)'}"
-              FontStyle="Italic" Foreground="{StaticResource Brush.TextDisabled}" Margin="0,0,0,4" />
+              FontStyle="Italic" Foreground="{StaticResource Brush.TextDisabled}" Margin="0,0,0,4">
+              <TextBlock.Text>
+                <MultiBinding Converter="{StaticResource FormatConverter}">
+                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.TargetFormat}" />
+                  <Binding Path="SelectedEntry.TargetDisplayName" />
+                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.TargetNone}" />
+                </MultiBinding>
+              </TextBlock.Text>
+            </TextBlock>
             <Button Content="{lex:Loc Key={x:Static res:LocalizationKeys+Distribution.AddSelectedNpcs}}"
                     Command="{Binding AddSelectedNpcsToEntryCommand}"
                     Style="{DynamicResource {x:Static themes:ResourceKeys.PrimaryButtonStyleKey}}" />
@@ -237,7 +244,7 @@
       </TabItem>
 
       <!-- Outfits Tab -->
-      <TabItem Header="Outfits">
+      <TabItem Header="{lex:Loc Key={x:Static res:LocalizationKeys+Tabs.Outfits}}">
         <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -248,7 +255,7 @@
             <TextBlock Text="{lex:Loc Key={x:Static res:LocalizationKeys+Labels.Search}}"
                        Style="{DynamicResource {x:Static themes:ResourceKeys.LabelTextStyleKey}}" />
             <TextBox Text="{Binding OutfitFilterSearchText, UpdateSourceTrigger=PropertyChanged}" MinWidth="200" />
-            <TextBlock Text="Target NPCs wearing a given existing outfit, effectively replacing it."
+            <TextBlock Text="{lex:Loc Key={x:Static res:LocalizationKeys+View.TargetOutfitsHint}}"
                        Opacity="0.6" Margin="12,0,0,0" VerticalAlignment="Center" />
           </StackPanel>
           <DataGrid Grid.Row="1" ItemsSource="{Binding FilteredOutfitFilters}" AutoGenerateColumns="False"
@@ -268,7 +275,7 @@
                                   Binding="{Binding ModDisplayName}" Width="1.2*" IsReadOnly="True" />
             </DataGrid.Columns>
           </DataGrid>
-          <Button Grid.Row="2" Content="Add Selected Outfits"
+          <Button Grid.Row="2" Content="{lex:Loc Key={x:Static res:LocalizationKeys+View.AddSelectedOutfits}}"
                   Command="{Binding AddSelectedOutfitFiltersToEntryCommand}" Style="{DynamicResource {x:Static themes:ResourceKeys.PrimaryButtonStyleKey}}" Margin="0,6,0,0" />
         </Grid>
       </TabItem>
