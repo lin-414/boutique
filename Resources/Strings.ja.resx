@@ -846,4 +846,414 @@
   <data name="LeveledList_SlotConflictTooltip" xml:space="preserve">
     <value>別のアイテムとバイプ部位スロットが重複しています。「すべて使用」がオンの場合、どちらか一方しか装備されません。</value>
   </data>
+
+  <!-- Code-behind Messages -->
+  <data name="Msg_Ready" xml:space="preserve">
+    <value>準備完了</value>
+  </data>
+  <data name="Msg_Saving" xml:space="preserve">
+    <value>保存中...</value>
+  </data>
+  <data name="Msg_ErrorGeneric" xml:space="preserve">
+    <value>エラー: {0}</value>
+  </data>
+  <data name="Msg_ErrorTitle" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Msg_InitializingMutagen" xml:space="preserve">
+    <value>Mutagenを初期化しています...</value>
+  </data>
+  <data name="Msg_LoadedPluginsWithArmors" xml:space="preserve">
+    <value>防具/衣装を含む{0}個のプラグインを読み込みました</value>
+  </data>
+  <data name="Msg_LoadingArmorsFrom" xml:space="preserve">
+    <value>{0}から防具を読み込んでいます...</value>
+  </data>
+  <data name="Msg_LoadedArmorsFrom" xml:space="preserve">
+    <value>{1}から{0}件の防具を読み込みました</value>
+  </data>
+  <data name="Msg_LoadedArmorsFromOutfit" xml:space="preserve">
+    <value>{1}から{0}件の防具を読み込みました。</value>
+  </data>
+  <data name="Msg_ErrorLoadingArmorsFrom" xml:space="preserve">
+    <value>{0}からの防具の読み込みエラー: {1}</value>
+  </data>
+  <data name="Msg_ErrorLoadingPluginTitle" xml:space="preserve">
+    <value>プラグインの読み込みエラー</value>
+  </data>
+  <data name="Msg_FailedLoadArmors" xml:space="preserve">
+    <value>{0}から防具を読み込めませんでした:&#10;{1}</value>
+  </data>
+  <data name="Msg_MappedArmorsTo" xml:space="preserve">
+    <value>{0}件の防具を{1}に割り当てました</value>
+  </data>
+  <data name="Msg_ErrorMappingArmors" xml:space="preserve">
+    <value>防具の割り当てエラー: {0}</value>
+  </data>
+  <data name="Msg_MarkedGlamOnly" xml:space="preserve">
+    <value>{0}件の防具を外観のみとしてマークしました。</value>
+  </data>
+  <data name="Msg_ErrorMarkingGlamOnly" xml:space="preserve">
+    <value>外観のみのマーク中にエラー: {0}</value>
+  </data>
+  <data name="Msg_ClearedMappings" xml:space="preserve">
+    <value>すべての割り当てをクリアしました。</value>
+  </data>
+  <data name="Msg_RemovedMappingFor" xml:space="preserve">
+    <value>{0}の割り当てを削除しました</value>
+  </data>
+  <data name="Msg_GlamOnlySummary" xml:space="preserve">
+    <value>✨ 外観のみ（防御値を0に設定）</value>
+  </data>
+  <data name="Msg_NotMapped" xml:space="preserve">
+    <value>未割り当て</value>
+  </data>
+  <data name="Msg_BuildingPreviewQuoted" xml:space="preserve">
+    <value>'{0}'のプレビューを作成しています...</value>
+  </data>
+  <data name="Msg_PreviewReadyQuoted" xml:space="preserve">
+    <value>'{0}'のプレビュー準備ができました。</value>
+  </data>
+  <data name="Msg_PreviewError" xml:space="preserve">
+    <value>プレビューエラー: {0}</value>
+  </data>
+  <data name="Msg_CreatingPatch" xml:space="preserve">
+    <value>パッチを作成しています...</value>
+  </data>
+  <data name="Msg_NoMappedArmors" xml:space="preserve">
+    <value>パッチする割り当て済みの防具がありません。</value>
+  </data>
+  <data name="Msg_OverwritePatchConfirm" xml:space="preserve">
+    <value>選択したパッチファイルは既に存在します。新しいデータを追加すると、そのESP内で同じFormIDを持つレコードが上書きされます。&#10;&#10;続行しますか？</value>
+  </data>
+  <data name="Msg_PatchCanceled" xml:space="preserve">
+    <value>パッチの作成がキャンセルされました。</value>
+  </data>
+  <data name="Msg_FailedToCreatePatch" xml:space="preserve">
+    <value>パッチの作成に失敗しました</value>
+  </data>
+  <data name="Msg_UnexpectedError" xml:space="preserve">
+    <value>予期しないエラー</value>
+  </data>
+  <data name="Msg_ErrorCreatingPatch" xml:space="preserve">
+    <value>パッチの作成エラー: {0}</value>
+  </data>
+  <data name="Msg_SelectFilePath" xml:space="preserve">
+    <value>ファイルパスを選択してください。</value>
+  </data>
+  <data name="Msg_ConflictsDetectedHeader" xml:space="preserve">
+    <value>⚠ 分布の競合が検出されました</value>
+  </data>
+  <data name="Msg_ConflictsRenameNote" xml:space="preserve">
+    <value>新しい分布を優先させる（最後に読み込まれるようにする）ため、ファイル名が次のように変更されます:</value>
+  </data>
+  <data name="Msg_ConflictsZPrefixNote" xml:space="preserve">
+    <value>この「Z」接頭辞により、アルファベット順の並べ替えで競合するファイルの後にあなたのファイルが配置されます。</value>
+  </data>
+  <data name="Msg_ConflictsContinueFilename" xml:space="preserve">
+    <value>このファイル名で続行しますか？</value>
+  </data>
+  <data name="Msg_ConflictsTitle" xml:space="preserve">
+    <value>競合が検出されました - ファイル名の変更が必要です</value>
+  </data>
+  <data name="Msg_SaveCancelled" xml:space="preserve">
+    <value>保存がキャンセルされました。</value>
+  </data>
+  <data name="Msg_OverwriteFileConfirm" xml:space="preserve">
+    <value>ファイル'{0}'は既に存在します。&#10;&#10;上書きしますか？</value>
+  </data>
+  <data name="Msg_ConfirmOverwriteTitle" xml:space="preserve">
+    <value>上書きの確認</value>
+  </data>
+  <data name="Msg_SavingDistributionFile" xml:space="preserve">
+    <value>分布ファイルを保存しています...</value>
+  </data>
+  <data name="Msg_SavedDistributionFile" xml:space="preserve">
+    <value>分布ファイルを保存しました: {0}</value>
+  </data>
+  <data name="Msg_ErrorSavingFile" xml:space="preserve">
+    <value>ファイルの保存エラー: {0}</value>
+  </data>
+  <data name="Msg_UnsavedChangesPrompt" xml:space="preserve">
+    <value>未保存の分布変更があります。続行する前に保存しますか？</value>
+  </data>
+  <data name="Msg_UnsavedChangesTitle" xml:space="preserve">
+    <value>未保存の変更</value>
+  </data>
+  <data name="Msg_SavedFile" xml:space="preserve">
+    <value>{0}を保存しました</value>
+  </data>
+  <data name="Msg_FileNotExist" xml:space="preserve">
+    <value>ファイルが存在しません。有効なファイルを選択してください。</value>
+  </data>
+  <data name="Msg_LoadingDistributionFile" xml:space="preserve">
+    <value>分布ファイルを読み込んでいます...</value>
+  </data>
+  <data name="Msg_LoadedDistributionEntries" xml:space="preserve">
+    <value>{1}から{0}件の分布エントリを読み込みました</value>
+  </data>
+  <data name="Msg_ParseErrorsSuffix" xml:space="preserve">
+    <value>（{0}行を解析できませんでした）</value>
+  </data>
+  <data name="Msg_ErrorLoadingFile" xml:space="preserve">
+    <value>ファイルの読み込みエラー: {0}</value>
+  </data>
+  <data name="Msg_ErrorGeneratingContent" xml:space="preserve">
+    <value>; ファイル内容の生成エラー: {0}</value>
+  </data>
+  <data name="Msg_SetDataPathScanNpcs" xml:space="preserve">
+    <value>NPCをスキャンする前に、設定でSkyrimのデータパスを設定してください。</value>
+  </data>
+  <data name="Msg_DataPathNotExist" xml:space="preserve">
+    <value>Skyrimのデータパスが存在しません: {0}</value>
+  </data>
+  <data name="Msg_InitializingSkyrim" xml:space="preserve">
+    <value>Skyrim環境を初期化しています...</value>
+  </data>
+  <data name="Msg_LoadingGameData" xml:space="preserve">
+    <value>ゲームデータを読み込んでいます（NPC、ファクション、キーワード、種族、クラス）...</value>
+  </data>
+  <data name="Msg_LoadingGameDataPlugins" xml:space="preserve">
+    <value>プラグインからゲームデータを読み込んでいます...</value>
+  </data>
+  <data name="Msg_LoadedGameData" xml:space="preserve">
+    <value>読み込み完了: NPC {0:N0}、ファクション {1:N0}、種族 {2:N0}、クラス {3:N0}、キーワード {4:N0}。</value>
+  </data>
+  <data name="Msg_ErrorScanningNpcs" xml:space="preserve">
+    <value>NPCのスキャンエラー: {0}</value>
+  </data>
+  <data name="Msg_NoOutfitSelectedPreview" xml:space="preserve">
+    <value>プレビューする衣装が選択されていません。</value>
+  </data>
+  <data name="Msg_InitializeBeforePreview" xml:space="preserve">
+    <value>衣装をプレビューする前に、Skyrimのデータパスを初期化してください。</value>
+  </data>
+  <data name="Msg_NoArmorPieces" xml:space="preserve">
+    <value>衣装'{0}'にはプレビューできる防具パーツがありません。</value>
+  </data>
+  <data name="Msg_BuildingPreview" xml:space="preserve">
+    <value>{0}のプレビューを作成しています...</value>
+  </data>
+  <data name="Msg_PreviewReady" xml:space="preserve">
+    <value>{0}のプレビュー準備ができました。</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfit" xml:space="preserve">
+    <value>衣装のプレビューに失敗しました: {0}</value>
+  </data>
+  <data name="Msg_NoOutfitForNpc" xml:space="preserve">
+    <value>このNPCにはプレビューする衣装がありません。</value>
+  </data>
+  <data name="Msg_CouldNotResolveOutfit" xml:space="preserve">
+    <value>衣装を解決できませんでした: {0}</value>
+  </data>
+  <data name="Msg_NoDistributionToPreview" xml:space="preserve">
+    <value>プレビューする分布がありません。</value>
+  </data>
+  <data name="Msg_BuildingOutfitPreview" xml:space="preserve">
+    <value>衣装のプレビューを作成しています...</value>
+  </data>
+  <data name="Msg_PreviewReadyWithCount" xml:space="preserve">
+    <value>{0}件の衣装のプレビュー準備ができました。</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfits" xml:space="preserve">
+    <value>衣装のプレビューに失敗しました: {0}</value>
+  </data>
+  <data name="Msg_FailedPreviewGeneric" xml:space="preserve">
+    <value>プレビューに失敗しました: {0}</value>
+  </data>
+  <data name="Msg_LinkCacheNotAvailable" xml:space="preserve">
+    <value>LinkCacheを利用できません。</value>
+  </data>
+  <data name="Msg_FoundNpcDistributions" xml:space="preserve">
+    <value>衣装分布を持つ{0}人のNPCが見つかりました（競合{1}件）。</value>
+  </data>
+  <data name="Msg_LoadingNpcOutfits" xml:space="preserve">
+    <value>NPCの衣装データを読み込んでいます...</value>
+  </data>
+  <data name="Msg_ErrorLoadingNpcOutfits" xml:space="preserve">
+    <value>NPCの衣装の読み込みエラー: {0}</value>
+  </data>
+  <data name="Msg_RefreshingNpcOutfits" xml:space="preserve">
+    <value>NPCの衣装データを更新しています...</value>
+  </data>
+  <data name="Msg_ErrorRefreshingNpcOutfits" xml:space="preserve">
+    <value>NPCの衣装の更新エラー: {0}</value>
+  </data>
+  <data name="Msg_NoFiltersActive" xml:space="preserve">
+    <value>有効なフィルターはありません</value>
+  </data>
+  <data name="Msg_NoFiltersToCopy" xml:space="preserve">
+    <value>コピーするフィルターがありません。先にフィルターを適用してください。</value>
+  </data>
+  <data name="Msg_FilterCopied" xml:space="preserve">
+    <value>フィルターをコピーしました: {0}</value>
+  </data>
+  <data name="Msg_SetDataPathLoadOutfits" xml:space="preserve">
+    <value>衣装を読み込む前に、設定でSkyrimのデータパスを設定してください。</value>
+  </data>
+  <data name="Msg_LoadingOutfits" xml:space="preserve">
+    <value>ロードオーダーから衣装を読み込んでいます...</value>
+  </data>
+  <data name="Msg_LoadedOutfits" xml:space="preserve">
+    <value>{0}件の衣装を読み込みました。</value>
+  </data>
+  <data name="Msg_ErrorLoadingOutfits" xml:space="preserve">
+    <value>衣装の読み込みエラー: {0}</value>
+  </data>
+  <data name="Msg_NoContainers" xml:space="preserve">
+    <value>コンテナが読み込まれていません</value>
+  </data>
+  <data name="Msg_ContainersCount" xml:space="preserve">
+    <value>コンテナ {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Msg_CalculatingGrades" xml:space="preserve">
+    <value>グレードを計算しています...</value>
+  </data>
+  <data name="Msg_GradeSummary" xml:space="preserve">
+    <value>グレード: {0} — NPCカバー {1:N0}/{2:N0}、Mod衣装使用 {3:N0}/{4:N0}、ユニーク衣装 {5:N0}</value>
+  </data>
+  <data name="Msg_CalculationFailed" xml:space="preserve">
+    <value>計算に失敗しました — 詳細はログを確認してください</value>
+  </data>
+  <data name="Msg_NothingToSave" xml:space="preserve">
+    <value>保存するものがありません。</value>
+  </data>
+  <data name="Msg_ErrorSavingTitle" xml:space="preserve">
+    <value>保存エラー</value>
+  </data>
+  <data name="Msg_UnexpectedErrorSaving" xml:space="preserve">
+    <value>予期しないエラーが発生しました:&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorSaving" xml:space="preserve">
+    <value>保存エラー: {0}</value>
+  </data>
+  <data name="Msg_MissingMastersCheckFailedTitle" xml:space="preserve">
+    <value>欠落マスターのチェックに失敗しました</value>
+  </data>
+  <data name="Msg_CouldNotVerifyMasters" xml:space="preserve">
+    <value>パッチのマスターを検証できませんでした（ファイルが破損しているかロックされている可能性があります）:&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatchTitle" xml:space="preserve">
+    <value>パッチのクリーンアップエラー</value>
+  </data>
+  <data name="Msg_SelectPluginImportLists" xml:space="preserve">
+    <value>レベルドリストをインポートするには、ソースプラグインを選択してください。</value>
+  </data>
+  <data name="Msg_SelectSpecificPlugin" xml:space="preserve">
+    <value>レベルドリストをインポートするには、特定のプラグインを選択してください（すべてのプラグインは不可）。</value>
+  </data>
+  <data name="Msg_ImportingLeveledLists" xml:space="preserve">
+    <value>{0}からレベルドリストをインポートしています...</value>
+  </data>
+  <data name="Msg_NoLeveledListsFound" xml:space="preserve">
+    <value>{0}にレベルドリストが見つかりませんでした。</value>
+  </data>
+  <data name="Msg_ImportedLeveledLists" xml:space="preserve">
+    <value>{1}から{0}件のレベルドリストをインポートしました。</value>
+  </data>
+  <data name="Msg_AllListsLoaded" xml:space="preserve">
+    <value>{0}のすべてのレベルドリストは既に読み込まれています。</value>
+  </data>
+  <data name="Msg_FailedOpenLogFile" xml:space="preserve">
+    <value>ログファイルを開けませんでした: {0}</value>
+  </data>
+  <data name="Msg_LogFileNotExist" xml:space="preserve">
+    <value>今日のログファイルはまだ存在しません:&#10;{0}</value>
+  </data>
+  <data name="Msg_LogFileNotFoundTitle" xml:space="preserve">
+    <value>ログファイルが見つかりません</value>
+  </data>
+  <data name="Msg_FailedOpenLogsFolder" xml:space="preserve">
+    <value>ログフォルダを開けませんでした: {0}</value>
+  </data>
+  <data name="Msg_LogsFolderNotExist" xml:space="preserve">
+    <value>ログフォルダが存在しません:&#10;{0}</value>
+  </data>
+  <data name="Msg_FolderNotFoundTitle" xml:space="preserve">
+    <value>フォルダが見つかりません</value>
+  </data>
+  <data name="Msg_FormatChangePrompt" xml:space="preserve">
+    <value>確率ベースの分布を有効にすると、ファイル形式がSPIDに変更されます。&#10;&#10;SkyPatcherは確率ベースの衣装分布に対応していません。この機能をサポートするため、ファイルはSPID形式で保存されます。&#10;&#10;続行しますか？</value>
+  </data>
+  <data name="Msg_FormatChangeTitle" xml:space="preserve">
+    <value>形式の変更が必要です</value>
+  </data>
+  <data name="Msg_WritingPatch" xml:space="preserve">
+    <value>パッチファイルを書き込んでいます...</value>
+  </data>
+  <data name="Msg_RefreshingLoadOrder" xml:space="preserve">
+    <value>ロードオーダーを更新しています...</value>
+  </data>
+  <data name="Msg_NoValidMatches" xml:space="preserve">
+    <value>パッチする有効なマッチがありません。</value>
+  </data>
+  <data name="Msg_PatchingArmor" xml:space="preserve">
+    <value>{0}をパッチしています...</value>
+  </data>
+  <data name="Msg_PatchCreated" xml:space="preserve">
+    <value>{1}に{0}件の防具を含むパッチを正常に作成しました</value>
+  </data>
+  <data name="Msg_WritingOutfit" xml:space="preserve">
+    <value>衣装{0}を書き込んでいます...</value>
+  </data>
+  <data name="Msg_WritingLeveledList" xml:space="preserve">
+    <value>レベルドリスト{0}を書き込んでいます...</value>
+  </data>
+  <data name="Msg_SavedTo" xml:space="preserve">
+    <value>{0}を{1}に保存しました</value>
+  </data>
+  <data name="Msg_OutfitsCount" xml:space="preserve">
+    <value>{0}件の衣装</value>
+  </data>
+  <data name="Msg_LeveledListsCount" xml:space="preserve">
+    <value>{0}件のレベルドリスト</value>
+  </data>
+  <data name="Msg_ListJoin" xml:space="preserve">
+    <value>と</value>
+  </data>
+  <data name="Msg_ZeroRecords" xml:space="preserve">
+    <value>0レコード</value>
+  </data>
+  <data name="Msg_MutagenNotInitialized" xml:space="preserve">
+    <value>Mutagenサービスが初期化されていません。先にSkyrimのデータパスを設定してください。</value>
+  </data>
+  <data name="Msg_InvalidPluginName" xml:space="preserve">
+    <value>'{0}'は有効なプラグイン名ではありません。パッチファイル名は.esp、.esm、.eslのいずれかで終わる必要があります。</value>
+  </data>
+  <data name="Msg_CannotWriteFileLocked" xml:space="preserve">
+    <value>'{0}'に書き込めません。ファイルが他のプログラム（Skyrim、xEditなど）によってロックされている可能性があります。開いている可能性のあるプログラムを閉じてから、再試行してください。</value>
+  </data>
+  <data name="Msg_CannotWriteFile" xml:space="preserve">
+    <value>'{0}'に書き込めません: {1}。ファイルが他のプログラムによってロックされている可能性があります。</value>
+  </data>
+  <data name="Msg_CannotWriteUnknown" xml:space="preserve">
+    <value>'{0}'に書き込めません: 不明なエラー。</value>
+  </data>
+  <data name="Msg_RemovedOutfitsMissingMasters" xml:space="preserve">
+    <value>欠落マスターを持つ{0}件の衣装を正常に削除しました。</value>
+  </data>
+  <data name="Msg_PatchFileNotExist" xml:space="preserve">
+    <value>パッチファイルが存在しません。</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatch" xml:space="preserve">
+    <value>パッチのクリーンアップエラー: {0}</value>
+  </data>
+  <data name="Msg_UpdateDownloadFailed" xml:space="preserve">
+    <value>更新のダウンロードに失敗しました: {0}</value>
+  </data>
+  <data name="Msg_UpdateErrorTitle" xml:space="preserve">
+    <value>更新エラー</value>
+  </data>
+  <data name="Msg_LatestVersion" xml:space="preserve">
+    <value>最新バージョンを実行しています。</value>
+  </data>
+  <data name="Msg_NoUpdateTitle" xml:space="preserve">
+    <value>利用可能な更新はありません</value>
+  </data>
+  <data name="Msg_AutosaveNoticeBody" xml:space="preserve">
+    <value>分布ファイルの自動保存は廃止されました。&#10;&#10;分布ファイルは、ユーザーが明示的に「保存」をクリックしたときにのみ保存されるようになりました。保存のたびに、ローテーションバックアップが自動的に作成され、次の場所に保存されます:&#10;%LOCALAPPDATA%\Boutique\Backups\&#10;&#10;この変更により、自動保存で一部のユーザーが経験したサイレントなデータ損失を防止できます。</value>
+  </data>
+  <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
+    <value>分布ファイルの自動保存の廃止</value>
+  </data>
 </root>

@@ -9,6 +9,7 @@ using Mutagen.Bethesda.Skyrim;
 using ReactiveUI;
 using ReactiveUI.SourceGenerators;
 using Serilog;
+using Messages = Boutique.Resources.LocalizationKeys.Messages;
 
 namespace Boutique.ViewModels;
 
@@ -97,7 +98,10 @@ public partial class DistributionReportCardTabViewModel : ReactiveObject
 
     if (initialResult.ArmorPieces.Count == 0)
     {
-      StatusMessage = $"Outfit '{label}' has no armor pieces to preview.";
+      StatusMessage = LocalizationService.GetFormatted(
+        Messages.NoArmorPieces,
+        "Outfit '{0}' has no armor pieces to preview.",
+        label);
       return;
     }
 
@@ -139,19 +143,25 @@ public partial class DistributionReportCardTabViewModel : ReactiveObject
   {
     try
     {
-      StatusMessage = $"Building preview for {label}…";
+      StatusMessage = LocalizationService.GetFormatted(
+        Messages.BuildingPreview,
+        "Building preview for {0}...",
+        label);
       var collection = new ArmorPreviewSceneCollection(
         1,
         0,
         [metadata],
         async (_, gender) => await sceneBuilder(gender));
       await ShowPreview.Handle(collection);
-      StatusMessage = $"Preview ready for {label}.";
+      StatusMessage = LocalizationService.GetFormatted(Messages.PreviewReady, "Preview ready for {0}.", label);
     }
     catch (Exception ex)
     {
       _logger.Error(ex, "Failed to preview {Label}", label);
-      StatusMessage = $"Failed to preview: {ex.Message}";
+      StatusMessage = LocalizationService.GetFormatted(
+        Messages.FailedPreviewGeneric,
+        "Failed to preview: {0}",
+        ex.Message);
     }
   }
 
@@ -159,7 +169,7 @@ public partial class DistributionReportCardTabViewModel : ReactiveObject
   public async Task CalculateAsync()
   {
     IsLoading     = true;
-    StatusMessage = "Calculating grades…";
+    StatusMessage = LocalizationService.Get(Messages.CalculatingGrades, "Calculating grades...");
 
     try
     {
@@ -191,10 +201,15 @@ public partial class DistributionReportCardTabViewModel : ReactiveObject
       ReplaceCollection(UnusedArmors, unusedArmors);
 
       HasResults    = true;
-      StatusMessage = $"Grade: {OverallGrade} — " +
-                      $"{result.CoveredNpcCount:N0}/{result.EligibleNpcCount:N0} NPCs covered, " +
-                      $"{result.UsedModOutfitCount:N0}/{result.ModOutfitCount:N0} mod outfits used, " +
-                      $"{result.UniqueOutfitCount:N0} unique outfits";
+      StatusMessage = LocalizationService.GetFormatted(
+        Messages.GradeSummary,
+        "Grade: {0} — {1:N0}/{2:N0} NPCs covered, {3:N0}/{4:N0} mod outfits used, {5:N0} unique outfits",
+        OverallGrade,
+        result.CoveredNpcCount,
+        result.EligibleNpcCount,
+        result.UsedModOutfitCount,
+        result.ModOutfitCount,
+        result.UniqueOutfitCount);
 
       _logger.Information(
         "Report card calculated: Overall={Overall}, Coverage={Coverage}%, Utilization={Utilization}%, Variety={Variety}%",
@@ -206,7 +221,9 @@ public partial class DistributionReportCardTabViewModel : ReactiveObject
     catch (Exception ex)
     {
       _logger.Error(ex, "Failed to calculate report card");
-      StatusMessage = "Calculation failed — check logs for details";
+      StatusMessage = LocalizationService.Get(
+        Messages.CalculationFailed,
+        "Calculation failed — check logs for details");
     }
     finally
     {

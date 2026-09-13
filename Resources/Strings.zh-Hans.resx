@@ -846,4 +846,414 @@
   <data name="LeveledList_SlotConflictTooltip" xml:space="preserve">
     <value>与另一个物品共用同一身体部位槽——启用"全部使用"时只会穿戴其中一个。</value>
   </data>
+
+  <!-- Code-behind Messages -->
+  <data name="Msg_Ready" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="Msg_Saving" xml:space="preserve">
+    <value>保存中...</value>
+  </data>
+  <data name="Msg_ErrorGeneric" xml:space="preserve">
+    <value>错误：{0}</value>
+  </data>
+  <data name="Msg_ErrorTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Msg_InitializingMutagen" xml:space="preserve">
+    <value>正在初始化 Mutagen...</value>
+  </data>
+  <data name="Msg_LoadedPluginsWithArmors" xml:space="preserve">
+    <value>已加载 {0} 个包含护甲/服装的插件</value>
+  </data>
+  <data name="Msg_LoadingArmorsFrom" xml:space="preserve">
+    <value>正在从 {0} 加载护甲...</value>
+  </data>
+  <data name="Msg_LoadedArmorsFrom" xml:space="preserve">
+    <value>已从 {1} 加载 {0} 件护甲</value>
+  </data>
+  <data name="Msg_LoadedArmorsFromOutfit" xml:space="preserve">
+    <value>已从 {1} 加载 {0} 件护甲。</value>
+  </data>
+  <data name="Msg_ErrorLoadingArmorsFrom" xml:space="preserve">
+    <value>从 {0} 加载护甲时出错：{1}</value>
+  </data>
+  <data name="Msg_ErrorLoadingPluginTitle" xml:space="preserve">
+    <value>加载插件出错</value>
+  </data>
+  <data name="Msg_FailedLoadArmors" xml:space="preserve">
+    <value>无法从 {0} 加载护甲：&#10;{1}</value>
+  </data>
+  <data name="Msg_MappedArmorsTo" xml:space="preserve">
+    <value>已将 {0} 件护甲映射到 {1}</value>
+  </data>
+  <data name="Msg_ErrorMappingArmors" xml:space="preserve">
+    <value>映射护甲时出错：{0}</value>
+  </data>
+  <data name="Msg_MarkedGlamOnly" xml:space="preserve">
+    <value>已将 {0} 件护甲标记为仅外观。</value>
+  </data>
+  <data name="Msg_ErrorMarkingGlamOnly" xml:space="preserve">
+    <value>标记为仅外观时出错：{0}</value>
+  </data>
+  <data name="Msg_ClearedMappings" xml:space="preserve">
+    <value>已清除所有映射。</value>
+  </data>
+  <data name="Msg_RemovedMappingFor" xml:space="preserve">
+    <value>已移除 {0} 的映射</value>
+  </data>
+  <data name="Msg_GlamOnlySummary" xml:space="preserve">
+    <value>✨ 仅外观（护甲值设为 0）</value>
+  </data>
+  <data name="Msg_NotMapped" xml:space="preserve">
+    <value>未映射</value>
+  </data>
+  <data name="Msg_BuildingPreviewQuoted" xml:space="preserve">
+    <value>正在为“{0}”生成预览...</value>
+  </data>
+  <data name="Msg_PreviewReadyQuoted" xml:space="preserve">
+    <value>“{0}”的预览已就绪。</value>
+  </data>
+  <data name="Msg_PreviewError" xml:space="preserve">
+    <value>预览错误：{0}</value>
+  </data>
+  <data name="Msg_CreatingPatch" xml:space="preserve">
+    <value>正在创建补丁...</value>
+  </data>
+  <data name="Msg_NoMappedArmors" xml:space="preserve">
+    <value>没有已映射的护甲可供生成补丁。</value>
+  </data>
+  <data name="Msg_OverwritePatchConfirm" xml:space="preserve">
+    <value>所选补丁文件已存在。添加新数据将覆盖该 ESP 中 FormID 相同的所有记录。&#10;&#10;是否继续？</value>
+  </data>
+  <data name="Msg_PatchCanceled" xml:space="preserve">
+    <value>补丁创建已取消。</value>
+  </data>
+  <data name="Msg_FailedToCreatePatch" xml:space="preserve">
+    <value>创建补丁失败</value>
+  </data>
+  <data name="Msg_UnexpectedError" xml:space="preserve">
+    <value>意外错误</value>
+  </data>
+  <data name="Msg_ErrorCreatingPatch" xml:space="preserve">
+    <value>创建补丁时出错：{0}</value>
+  </data>
+  <data name="Msg_SelectFilePath" xml:space="preserve">
+    <value>请选择文件路径。</value>
+  </data>
+  <data name="Msg_ConflictsDetectedHeader" xml:space="preserve">
+    <value>⚠ 检测到分布冲突</value>
+  </data>
+  <data name="Msg_ConflictsRenameNote" xml:space="preserve">
+    <value>为确保新的分布具有更高优先级（最后加载），文件名将更改为：</value>
+  </data>
+  <data name="Msg_ConflictsZPrefixNote" xml:space="preserve">
+    <value>此“Z”前缀可确保按字母排序时，您的文件排在冲突文件之后。</value>
+  </data>
+  <data name="Msg_ConflictsContinueFilename" xml:space="preserve">
+    <value>是否使用此文件名继续？</value>
+  </data>
+  <data name="Msg_ConflictsTitle" xml:space="preserve">
+    <value>检测到冲突 - 需要更改文件名</value>
+  </data>
+  <data name="Msg_SaveCancelled" xml:space="preserve">
+    <value>保存已取消。</value>
+  </data>
+  <data name="Msg_OverwriteFileConfirm" xml:space="preserve">
+    <value>文件“{0}”已存在。&#10;&#10;是否覆盖？</value>
+  </data>
+  <data name="Msg_ConfirmOverwriteTitle" xml:space="preserve">
+    <value>确认覆盖</value>
+  </data>
+  <data name="Msg_SavingDistributionFile" xml:space="preserve">
+    <value>正在保存分布文件...</value>
+  </data>
+  <data name="Msg_SavedDistributionFile" xml:space="preserve">
+    <value>分布文件保存成功：{0}</value>
+  </data>
+  <data name="Msg_ErrorSavingFile" xml:space="preserve">
+    <value>保存文件时出错：{0}</value>
+  </data>
+  <data name="Msg_UnsavedChangesPrompt" xml:space="preserve">
+    <value>您有未保存的分布更改。是否在继续之前保存？</value>
+  </data>
+  <data name="Msg_UnsavedChangesTitle" xml:space="preserve">
+    <value>未保存的更改</value>
+  </data>
+  <data name="Msg_SavedFile" xml:space="preserve">
+    <value>已保存 {0}</value>
+  </data>
+  <data name="Msg_FileNotExist" xml:space="preserve">
+    <value>文件不存在。请选择有效的文件。</value>
+  </data>
+  <data name="Msg_LoadingDistributionFile" xml:space="preserve">
+    <value>正在加载分布文件...</value>
+  </data>
+  <data name="Msg_LoadedDistributionEntries" xml:space="preserve">
+    <value>已从 {1} 加载 {0} 条分布条目</value>
+  </data>
+  <data name="Msg_ParseErrorsSuffix" xml:space="preserve">
+    <value>（有 {0} 行无法解析）</value>
+  </data>
+  <data name="Msg_ErrorLoadingFile" xml:space="preserve">
+    <value>加载文件时出错：{0}</value>
+  </data>
+  <data name="Msg_ErrorGeneratingContent" xml:space="preserve">
+    <value>；生成文件内容时出错：{0}</value>
+  </data>
+  <data name="Msg_SetDataPathScanNpcs" xml:space="preserve">
+    <value>扫描 NPC 之前，请先在设置中设置 Skyrim 数据路径。</value>
+  </data>
+  <data name="Msg_DataPathNotExist" xml:space="preserve">
+    <value>Skyrim 数据路径不存在：{0}</value>
+  </data>
+  <data name="Msg_InitializingSkyrim" xml:space="preserve">
+    <value>正在初始化 Skyrim 环境...</value>
+  </data>
+  <data name="Msg_LoadingGameData" xml:space="preserve">
+    <value>正在加载游戏数据（NPC、阵营、关键词、种族、职业）...</value>
+  </data>
+  <data name="Msg_LoadingGameDataPlugins" xml:space="preserve">
+    <value>正在从插件加载游戏数据...</value>
+  </data>
+  <data name="Msg_LoadedGameData" xml:space="preserve">
+    <value>已加载：NPC {0:N0} 个，阵营 {1:N0} 个，种族 {2:N0} 个，职业 {3:N0} 个，关键词 {4:N0} 个。</value>
+  </data>
+  <data name="Msg_ErrorScanningNpcs" xml:space="preserve">
+    <value>扫描 NPC 时出错：{0}</value>
+  </data>
+  <data name="Msg_NoOutfitSelectedPreview" xml:space="preserve">
+    <value>未选择要预览的服装。</value>
+  </data>
+  <data name="Msg_InitializeBeforePreview" xml:space="preserve">
+    <value>预览服装之前，请先初始化 Skyrim 数据路径。</value>
+  </data>
+  <data name="Msg_NoArmorPieces" xml:space="preserve">
+    <value>服装“{0}”没有可预览的护甲部件。</value>
+  </data>
+  <data name="Msg_BuildingPreview" xml:space="preserve">
+    <value>正在为 {0} 生成预览...</value>
+  </data>
+  <data name="Msg_PreviewReady" xml:space="preserve">
+    <value>{0} 的预览已就绪。</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfit" xml:space="preserve">
+    <value>预览服装失败：{0}</value>
+  </data>
+  <data name="Msg_NoOutfitForNpc" xml:space="preserve">
+    <value>该 NPC 没有可预览的服装。</value>
+  </data>
+  <data name="Msg_CouldNotResolveOutfit" xml:space="preserve">
+    <value>无法解析服装：{0}</value>
+  </data>
+  <data name="Msg_NoDistributionToPreview" xml:space="preserve">
+    <value>没有可预览的分布。</value>
+  </data>
+  <data name="Msg_BuildingOutfitPreview" xml:space="preserve">
+    <value>正在生成服装预览...</value>
+  </data>
+  <data name="Msg_PreviewReadyWithCount" xml:space="preserve">
+    <value>预览已就绪，共 {0} 套服装。</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfits" xml:space="preserve">
+    <value>预览服装失败：{0}</value>
+  </data>
+  <data name="Msg_FailedPreviewGeneric" xml:space="preserve">
+    <value>预览失败：{0}</value>
+  </data>
+  <data name="Msg_LinkCacheNotAvailable" xml:space="preserve">
+    <value>LinkCache 不可用。</value>
+  </data>
+  <data name="Msg_FoundNpcDistributions" xml:space="preserve">
+    <value>找到 {0} 个有服装分布的 NPC（{1} 处冲突）。</value>
+  </data>
+  <data name="Msg_LoadingNpcOutfits" xml:space="preserve">
+    <value>正在加载 NPC 服装数据...</value>
+  </data>
+  <data name="Msg_ErrorLoadingNpcOutfits" xml:space="preserve">
+    <value>加载 NPC 服装时出错：{0}</value>
+  </data>
+  <data name="Msg_RefreshingNpcOutfits" xml:space="preserve">
+    <value>正在刷新 NPC 服装数据...</value>
+  </data>
+  <data name="Msg_ErrorRefreshingNpcOutfits" xml:space="preserve">
+    <value>刷新 NPC 服装时出错：{0}</value>
+  </data>
+  <data name="Msg_NoFiltersActive" xml:space="preserve">
+    <value>无活动筛选器</value>
+  </data>
+  <data name="Msg_NoFiltersToCopy" xml:space="preserve">
+    <value>没有可复制的筛选器。请先应用筛选器。</value>
+  </data>
+  <data name="Msg_FilterCopied" xml:space="preserve">
+    <value>筛选器已复制：{0}</value>
+  </data>
+  <data name="Msg_SetDataPathLoadOutfits" xml:space="preserve">
+    <value>加载服装之前，请先在设置中设置 Skyrim 数据路径。</value>
+  </data>
+  <data name="Msg_LoadingOutfits" xml:space="preserve">
+    <value>正在从加载顺序加载服装...</value>
+  </data>
+  <data name="Msg_LoadedOutfits" xml:space="preserve">
+    <value>已加载 {0} 套服装。</value>
+  </data>
+  <data name="Msg_ErrorLoadingOutfits" xml:space="preserve">
+    <value>加载服装时出错：{0}</value>
+  </data>
+  <data name="Msg_NoContainers" xml:space="preserve">
+    <value>未加载任何容器</value>
+  </data>
+  <data name="Msg_ContainersCount" xml:space="preserve">
+    <value>容器 {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Msg_CalculatingGrades" xml:space="preserve">
+    <value>正在计算评级...</value>
+  </data>
+  <data name="Msg_GradeSummary" xml:space="preserve">
+    <value>评级：{0} — 覆盖 NPC {1:N0}/{2:N0}，使用 Mod 服装 {3:N0}/{4:N0}，独特服装 {5:N0} 套</value>
+  </data>
+  <data name="Msg_CalculationFailed" xml:space="preserve">
+    <value>计算失败 — 详情请查看日志</value>
+  </data>
+  <data name="Msg_NothingToSave" xml:space="preserve">
+    <value>没有需要保存的内容。</value>
+  </data>
+  <data name="Msg_ErrorSavingTitle" xml:space="preserve">
+    <value>保存出错</value>
+  </data>
+  <data name="Msg_UnexpectedErrorSaving" xml:space="preserve">
+    <value>发生意外错误：&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorSaving" xml:space="preserve">
+    <value>保存时出错：{0}</value>
+  </data>
+  <data name="Msg_MissingMastersCheckFailedTitle" xml:space="preserve">
+    <value>缺失主插件检查失败</value>
+  </data>
+  <data name="Msg_CouldNotVerifyMasters" xml:space="preserve">
+    <value>无法验证补丁的主插件（文件可能已损坏或被锁定）：&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatchTitle" xml:space="preserve">
+    <value>清理补丁出错</value>
+  </data>
+  <data name="Msg_SelectPluginImportLists" xml:space="preserve">
+    <value>请选择一个源插件以导入等级列表。</value>
+  </data>
+  <data name="Msg_SelectSpecificPlugin" xml:space="preserve">
+    <value>请选择一个特定插件（不能是“所有插件”）以导入等级列表。</value>
+  </data>
+  <data name="Msg_ImportingLeveledLists" xml:space="preserve">
+    <value>正在从 {0} 导入等级列表...</value>
+  </data>
+  <data name="Msg_NoLeveledListsFound" xml:space="preserve">
+    <value>在 {0} 中未找到等级列表。</value>
+  </data>
+  <data name="Msg_ImportedLeveledLists" xml:space="preserve">
+    <value>已从 {1} 导入 {0} 个等级列表。</value>
+  </data>
+  <data name="Msg_AllListsLoaded" xml:space="preserve">
+    <value>{0} 中的所有等级列表均已加载。</value>
+  </data>
+  <data name="Msg_FailedOpenLogFile" xml:space="preserve">
+    <value>无法打开日志文件：{0}</value>
+  </data>
+  <data name="Msg_LogFileNotExist" xml:space="preserve">
+    <value>今天的日志文件尚不存在：&#10;{0}</value>
+  </data>
+  <data name="Msg_LogFileNotFoundTitle" xml:space="preserve">
+    <value>未找到日志文件</value>
+  </data>
+  <data name="Msg_FailedOpenLogsFolder" xml:space="preserve">
+    <value>无法打开日志文件夹：{0}</value>
+  </data>
+  <data name="Msg_LogsFolderNotExist" xml:space="preserve">
+    <value>日志文件夹不存在：&#10;{0}</value>
+  </data>
+  <data name="Msg_FolderNotFoundTitle" xml:space="preserve">
+    <value>未找到文件夹</value>
+  </data>
+  <data name="Msg_FormatChangePrompt" xml:space="preserve">
+    <value>启用基于几率的分布会将文件格式更改为 SPID。&#10;&#10;SkyPatcher 不支持基于几率的服装分布。为支持此功能，文件将以 SPID 格式保存。&#10;&#10;是否继续？</value>
+  </data>
+  <data name="Msg_FormatChangeTitle" xml:space="preserve">
+    <value>需要更改格式</value>
+  </data>
+  <data name="Msg_WritingPatch" xml:space="preserve">
+    <value>正在写入补丁文件...</value>
+  </data>
+  <data name="Msg_RefreshingLoadOrder" xml:space="preserve">
+    <value>正在刷新加载顺序...</value>
+  </data>
+  <data name="Msg_NoValidMatches" xml:space="preserve">
+    <value>没有可生成补丁的有效匹配。</value>
+  </data>
+  <data name="Msg_PatchingArmor" xml:space="preserve">
+    <value>正在为 {0} 生成补丁...</value>
+  </data>
+  <data name="Msg_PatchCreated" xml:space="preserve">
+    <value>已成功创建补丁，包含 {0} 件护甲，位于 {1}</value>
+  </data>
+  <data name="Msg_WritingOutfit" xml:space="preserve">
+    <value>正在写入服装 {0}...</value>
+  </data>
+  <data name="Msg_WritingLeveledList" xml:space="preserve">
+    <value>正在写入等级列表 {0}...</value>
+  </data>
+  <data name="Msg_SavedTo" xml:space="preserve">
+    <value>已将 {0} 保存到 {1}</value>
+  </data>
+  <data name="Msg_OutfitsCount" xml:space="preserve">
+    <value>{0} 套服装</value>
+  </data>
+  <data name="Msg_LeveledListsCount" xml:space="preserve">
+    <value>{0} 个等级列表</value>
+  </data>
+  <data name="Msg_ListJoin" xml:space="preserve">
+    <value>和</value>
+  </data>
+  <data name="Msg_ZeroRecords" xml:space="preserve">
+    <value>0 条记录</value>
+  </data>
+  <data name="Msg_MutagenNotInitialized" xml:space="preserve">
+    <value>Mutagen 服务未初始化。请先设置 Skyrim 数据路径。</value>
+  </data>
+  <data name="Msg_InvalidPluginName" xml:space="preserve">
+    <value>“{0}”不是有效的插件名称。补丁文件名必须以 .esp、.esm 或 .esl 结尾。</value>
+  </data>
+  <data name="Msg_CannotWriteFileLocked" xml:space="preserve">
+    <value>无法写入“{0}”。该文件可能正被其他程序（Skyrim、xEdit 等）占用。请关闭可能打开该文件的程序，然后重试。</value>
+  </data>
+  <data name="Msg_CannotWriteFile" xml:space="preserve">
+    <value>无法写入“{0}”：{1}。该文件可能正被其他程序占用。</value>
+  </data>
+  <data name="Msg_CannotWriteUnknown" xml:space="preserve">
+    <value>无法写入“{0}”：未知错误。</value>
+  </data>
+  <data name="Msg_RemovedOutfitsMissingMasters" xml:space="preserve">
+    <value>已成功移除 {0} 套存在缺失主插件的服装。</value>
+  </data>
+  <data name="Msg_PatchFileNotExist" xml:space="preserve">
+    <value>补丁文件不存在。</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatch" xml:space="preserve">
+    <value>清理补丁时出错：{0}</value>
+  </data>
+  <data name="Msg_UpdateDownloadFailed" xml:space="preserve">
+    <value>下载更新失败：{0}</value>
+  </data>
+  <data name="Msg_UpdateErrorTitle" xml:space="preserve">
+    <value>更新错误</value>
+  </data>
+  <data name="Msg_LatestVersion" xml:space="preserve">
+    <value>您正在使用最新版本。</value>
+  </data>
+  <data name="Msg_NoUpdateTitle" xml:space="preserve">
+    <value>没有可用更新</value>
+  </data>
+  <data name="Msg_AutosaveNoticeBody" xml:space="preserve">
+    <value>分布文件的自动保存功能已移除。&#10;&#10;现在，只有当您显式点击“保存”时才会保存分布文件。每次保存之前会自动创建一个轮换备份，保存在：&#10;%LOCALAPPDATA%\Boutique\Backups\&#10;&#10;此更改可避免部分用户在自动保存时遇到的静默数据丢失问题。</value>
+  </data>
+  <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
+    <value>分布文件自动保存已移除</value>
+  </data>
 </root>

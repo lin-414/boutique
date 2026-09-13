@@ -317,9 +317,13 @@ public sealed class MutagenService(ILoggingService loggingService, PatcherSettin
 
     await Task.Run(() =>
     {
-      _environment?.Dispose();
-
+      // Build the replacement environment first and swap it in before disposing the old one:
+      // concurrent readers may still hold the previous LinkCache, and disposing it under them
+      // would throw ObjectDisposedException mid-enumeration. The stale environment is disposed
+      // after the swap (last reader to have captured it may briefly outlive this, which is safe
+      // for read-only link caches as long as we don't dispose while it's being built).
       var useExplicitPath = PathUtilities.HasPluginFiles(DataFolderPath);
+      var oldEnvironment  = _environment;
       try
       {
         BuildEnvironment(useExplicitPath ? DataFolderPath : null);
@@ -331,6 +335,10 @@ public sealed class MutagenService(ILoggingService loggingService, PatcherSettin
           "BuildEnvironment with explicit path {UseExplicit} failed during refresh, falling back to auto-detection.",
           useExplicitPath);
         BuildEnvironment(null);
+      }
+      finally
+      {
+        oldEnvironment?.Dispose();
       }
     });
 

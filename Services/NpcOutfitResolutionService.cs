@@ -416,7 +416,7 @@ public class NpcOutfitResolutionService(
     return BuildNpcOutfitAssignmentsCore(npcDistributions, npcLookup);
   }
 
-  private static List<NpcOutfitAssignment> BuildNpcOutfitAssignmentsCore(
+  internal static List<NpcOutfitAssignment> BuildNpcOutfitAssignmentsCore(
     Dictionary<FormKey, List<OutfitDistribution>> npcDistributions,
     IReadOnlyDictionary<FormKey, NpcBasicInfo> npcLookup)
   {
@@ -551,7 +551,7 @@ public class NpcOutfitResolutionService(
     _logger.Debug("Found {Count} NPCs with ESP-provided default outfits", espOutfitCount);
   }
 
-  private sealed record NpcBasicInfo(string? EditorId, string? Name, ModKey SourceMod);
+  internal sealed record NpcBasicInfo(string? EditorId, string? Name, ModKey SourceMod);
 
   private sealed record SpidOutfitLine(
     DistributionLine Line,

@@ -878,4 +878,414 @@
   <data name="LeveledList_SlotConflictTooltip" xml:space="preserve">
     <value>Shares a biped slot with another item — with 'Use all' on, only one of them will be worn.</value>
   </data>
+
+  <!-- Code-behind Messages -->
+  <data name="Msg_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Msg_Saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="Msg_ErrorGeneric" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="Msg_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Msg_InitializingMutagen" xml:space="preserve">
+    <value>Initializing Mutagen...</value>
+  </data>
+  <data name="Msg_LoadedPluginsWithArmors" xml:space="preserve">
+    <value>Loaded {0} plugins with armors/outfits</value>
+  </data>
+  <data name="Msg_LoadingArmorsFrom" xml:space="preserve">
+    <value>Loading armors from {0}...</value>
+  </data>
+  <data name="Msg_LoadedArmorsFrom" xml:space="preserve">
+    <value>Loaded {0} armors from {1}</value>
+  </data>
+  <data name="Msg_LoadedArmorsFromOutfit" xml:space="preserve">
+    <value>Loaded {0} armors from {1}.</value>
+  </data>
+  <data name="Msg_ErrorLoadingArmorsFrom" xml:space="preserve">
+    <value>Error loading armors from {0}: {1}</value>
+  </data>
+  <data name="Msg_ErrorLoadingPluginTitle" xml:space="preserve">
+    <value>Error Loading Plugin</value>
+  </data>
+  <data name="Msg_FailedLoadArmors" xml:space="preserve">
+    <value>Failed to load armors from {0}:&#10;{1}</value>
+  </data>
+  <data name="Msg_MappedArmorsTo" xml:space="preserve">
+    <value>Mapped {0} armors to {1}</value>
+  </data>
+  <data name="Msg_ErrorMappingArmors" xml:space="preserve">
+    <value>Error mapping armors: {0}</value>
+  </data>
+  <data name="Msg_MarkedGlamOnly" xml:space="preserve">
+    <value>Marked {0} armor(s) as glam-only.</value>
+  </data>
+  <data name="Msg_ErrorMarkingGlamOnly" xml:space="preserve">
+    <value>Error marking glam-only: {0}</value>
+  </data>
+  <data name="Msg_ClearedMappings" xml:space="preserve">
+    <value>Cleared all mappings.</value>
+  </data>
+  <data name="Msg_RemovedMappingFor" xml:space="preserve">
+    <value>Removed mapping for {0}</value>
+  </data>
+  <data name="Msg_GlamOnlySummary" xml:space="preserve">
+    <value>✨ Glam-only (armor rating set to 0)</value>
+  </data>
+  <data name="Msg_NotMapped" xml:space="preserve">
+    <value>Not mapped</value>
+  </data>
+  <data name="Msg_BuildingPreviewQuoted" xml:space="preserve">
+    <value>Building preview for '{0}'...</value>
+  </data>
+  <data name="Msg_PreviewReadyQuoted" xml:space="preserve">
+    <value>Preview ready for '{0}'.</value>
+  </data>
+  <data name="Msg_PreviewError" xml:space="preserve">
+    <value>Preview error: {0}</value>
+  </data>
+  <data name="Msg_CreatingPatch" xml:space="preserve">
+    <value>Creating patch...</value>
+  </data>
+  <data name="Msg_NoMappedArmors" xml:space="preserve">
+    <value>No mapped armors to patch.</value>
+  </data>
+  <data name="Msg_OverwritePatchConfirm" xml:space="preserve">
+    <value>The selected patch file already exists. Adding new data will overwrite any records with matching FormIDs in that ESP.&#10;&#10;Do you want to continue?</value>
+  </data>
+  <data name="Msg_PatchCanceled" xml:space="preserve">
+    <value>Patch creation canceled.</value>
+  </data>
+  <data name="Msg_FailedToCreatePatch" xml:space="preserve">
+    <value>Failed to Create Patch</value>
+  </data>
+  <data name="Msg_UnexpectedError" xml:space="preserve">
+    <value>Unexpected Error</value>
+  </data>
+  <data name="Msg_ErrorCreatingPatch" xml:space="preserve">
+    <value>Error creating patch: {0}</value>
+  </data>
+  <data name="Msg_SelectFilePath" xml:space="preserve">
+    <value>Please select a file path.</value>
+  </data>
+  <data name="Msg_ConflictsDetectedHeader" xml:space="preserve">
+    <value>⚠ Distribution Conflicts Detected</value>
+  </data>
+  <data name="Msg_ConflictsRenameNote" xml:space="preserve">
+    <value>To ensure your new distributions take priority (load last), the filename will be changed to:</value>
+  </data>
+  <data name="Msg_ConflictsZPrefixNote" xml:space="preserve">
+    <value>This 'Z' prefix ensures alphabetical sorting places your file after the conflicting files.</value>
+  </data>
+  <data name="Msg_ConflictsContinueFilename" xml:space="preserve">
+    <value>Do you want to continue with this filename?</value>
+  </data>
+  <data name="Msg_ConflictsTitle" xml:space="preserve">
+    <value>Conflicts Detected - Filename Change Required</value>
+  </data>
+  <data name="Msg_SaveCancelled" xml:space="preserve">
+    <value>Save cancelled.</value>
+  </data>
+  <data name="Msg_OverwriteFileConfirm" xml:space="preserve">
+    <value>The file '{0}' already exists.&#10;&#10;Do you want to overwrite it?</value>
+  </data>
+  <data name="Msg_ConfirmOverwriteTitle" xml:space="preserve">
+    <value>Confirm Overwrite</value>
+  </data>
+  <data name="Msg_SavingDistributionFile" xml:space="preserve">
+    <value>Saving distribution file...</value>
+  </data>
+  <data name="Msg_SavedDistributionFile" xml:space="preserve">
+    <value>Successfully saved distribution file: {0}</value>
+  </data>
+  <data name="Msg_ErrorSavingFile" xml:space="preserve">
+    <value>Error saving file: {0}</value>
+  </data>
+  <data name="Msg_UnsavedChangesPrompt" xml:space="preserve">
+    <value>You have unsaved distribution changes. Would you like to save before continuing?</value>
+  </data>
+  <data name="Msg_UnsavedChangesTitle" xml:space="preserve">
+    <value>Unsaved Changes</value>
+  </data>
+  <data name="Msg_SavedFile" xml:space="preserve">
+    <value>Saved {0}</value>
+  </data>
+  <data name="Msg_FileNotExist" xml:space="preserve">
+    <value>File does not exist. Please select a valid file.</value>
+  </data>
+  <data name="Msg_LoadingDistributionFile" xml:space="preserve">
+    <value>Loading distribution file...</value>
+  </data>
+  <data name="Msg_LoadedDistributionEntries" xml:space="preserve">
+    <value>Loaded {0} distribution entries from {1}</value>
+  </data>
+  <data name="Msg_ParseErrorsSuffix" xml:space="preserve">
+    <value>({0} line(s) could not be parsed)</value>
+  </data>
+  <data name="Msg_ErrorLoadingFile" xml:space="preserve">
+    <value>Error loading file: {0}</value>
+  </data>
+  <data name="Msg_ErrorGeneratingContent" xml:space="preserve">
+    <value>; Error generating file content: {0}</value>
+  </data>
+  <data name="Msg_SetDataPathScanNpcs" xml:space="preserve">
+    <value>Please set the Skyrim data path in Settings before scanning NPCs.</value>
+  </data>
+  <data name="Msg_DataPathNotExist" xml:space="preserve">
+    <value>Skyrim data path does not exist: {0}</value>
+  </data>
+  <data name="Msg_InitializingSkyrim" xml:space="preserve">
+    <value>Initializing Skyrim environment...</value>
+  </data>
+  <data name="Msg_LoadingGameData" xml:space="preserve">
+    <value>Loading game data (NPCs, factions, keywords, races, classes)...</value>
+  </data>
+  <data name="Msg_LoadingGameDataPlugins" xml:space="preserve">
+    <value>Loading game data from plugins...</value>
+  </data>
+  <data name="Msg_LoadedGameData" xml:space="preserve">
+    <value>Loaded: {0:N0} NPCs, {1:N0} factions, {2:N0} races, {3:N0} classes, {4:N0} keywords.</value>
+  </data>
+  <data name="Msg_ErrorScanningNpcs" xml:space="preserve">
+    <value>Error scanning NPCs: {0}</value>
+  </data>
+  <data name="Msg_NoOutfitSelectedPreview" xml:space="preserve">
+    <value>No outfit selected for preview.</value>
+  </data>
+  <data name="Msg_InitializeBeforePreview" xml:space="preserve">
+    <value>Initialize Skyrim data path before previewing outfits.</value>
+  </data>
+  <data name="Msg_NoArmorPieces" xml:space="preserve">
+    <value>Outfit '{0}' has no armor pieces to preview.</value>
+  </data>
+  <data name="Msg_BuildingPreview" xml:space="preserve">
+    <value>Building preview for {0}...</value>
+  </data>
+  <data name="Msg_PreviewReady" xml:space="preserve">
+    <value>Preview ready for {0}.</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfit" xml:space="preserve">
+    <value>Failed to preview outfit: {0}</value>
+  </data>
+  <data name="Msg_NoOutfitForNpc" xml:space="preserve">
+    <value>No outfit to preview for this NPC.</value>
+  </data>
+  <data name="Msg_CouldNotResolveOutfit" xml:space="preserve">
+    <value>Could not resolve outfit: {0}</value>
+  </data>
+  <data name="Msg_NoDistributionToPreview" xml:space="preserve">
+    <value>No distribution to preview.</value>
+  </data>
+  <data name="Msg_BuildingOutfitPreview" xml:space="preserve">
+    <value>Building outfit preview...</value>
+  </data>
+  <data name="Msg_PreviewReadyWithCount" xml:space="preserve">
+    <value>Preview ready with {0} outfit(s).</value>
+  </data>
+  <data name="Msg_FailedPreviewOutfits" xml:space="preserve">
+    <value>Failed to preview outfits: {0}</value>
+  </data>
+  <data name="Msg_FailedPreviewGeneric" xml:space="preserve">
+    <value>Failed to preview: {0}</value>
+  </data>
+  <data name="Msg_LinkCacheNotAvailable" xml:space="preserve">
+    <value>LinkCache not available.</value>
+  </data>
+  <data name="Msg_FoundNpcDistributions" xml:space="preserve">
+    <value>Found {0} NPCs with outfit distributions ({1} conflicts).</value>
+  </data>
+  <data name="Msg_LoadingNpcOutfits" xml:space="preserve">
+    <value>Loading NPC outfit data...</value>
+  </data>
+  <data name="Msg_ErrorLoadingNpcOutfits" xml:space="preserve">
+    <value>Error loading NPC outfits: {0}</value>
+  </data>
+  <data name="Msg_RefreshingNpcOutfits" xml:space="preserve">
+    <value>Refreshing NPC outfit data...</value>
+  </data>
+  <data name="Msg_ErrorRefreshingNpcOutfits" xml:space="preserve">
+    <value>Error refreshing NPC outfits: {0}</value>
+  </data>
+  <data name="Msg_NoFiltersActive" xml:space="preserve">
+    <value>No filters active</value>
+  </data>
+  <data name="Msg_NoFiltersToCopy" xml:space="preserve">
+    <value>No filters to copy. Apply filters first.</value>
+  </data>
+  <data name="Msg_FilterCopied" xml:space="preserve">
+    <value>Filter copied: {0}</value>
+  </data>
+  <data name="Msg_SetDataPathLoadOutfits" xml:space="preserve">
+    <value>Please set the Skyrim data path in Settings before loading outfits.</value>
+  </data>
+  <data name="Msg_LoadingOutfits" xml:space="preserve">
+    <value>Loading outfits from load order...</value>
+  </data>
+  <data name="Msg_LoadedOutfits" xml:space="preserve">
+    <value>Loaded {0} outfits.</value>
+  </data>
+  <data name="Msg_ErrorLoadingOutfits" xml:space="preserve">
+    <value>Error loading outfits: {0}</value>
+  </data>
+  <data name="Msg_NoContainers" xml:space="preserve">
+    <value>No containers loaded</value>
+  </data>
+  <data name="Msg_ContainersCount" xml:space="preserve">
+    <value>{0:N0} of {1:N0} containers</value>
+  </data>
+  <data name="Msg_CalculatingGrades" xml:space="preserve">
+    <value>Calculating grades...</value>
+  </data>
+  <data name="Msg_GradeSummary" xml:space="preserve">
+    <value>Grade: {0} — {1:N0}/{2:N0} NPCs covered, {3:N0}/{4:N0} mod outfits used, {5:N0} unique outfits</value>
+  </data>
+  <data name="Msg_CalculationFailed" xml:space="preserve">
+    <value>Calculation failed — check logs for details</value>
+  </data>
+  <data name="Msg_NothingToSave" xml:space="preserve">
+    <value>Nothing to save.</value>
+  </data>
+  <data name="Msg_ErrorSavingTitle" xml:space="preserve">
+    <value>Error Saving</value>
+  </data>
+  <data name="Msg_UnexpectedErrorSaving" xml:space="preserve">
+    <value>An unexpected error occurred:&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorSaving" xml:space="preserve">
+    <value>Error saving: {0}</value>
+  </data>
+  <data name="Msg_MissingMastersCheckFailedTitle" xml:space="preserve">
+    <value>Missing Masters Check Failed</value>
+  </data>
+  <data name="Msg_CouldNotVerifyMasters" xml:space="preserve">
+    <value>Could not verify the patch's masters (the file may be corrupt or locked):&#10;{0}</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatchTitle" xml:space="preserve">
+    <value>Error Cleaning Patch</value>
+  </data>
+  <data name="Msg_SelectPluginImportLists" xml:space="preserve">
+    <value>Select a source plugin to import leveled lists.</value>
+  </data>
+  <data name="Msg_SelectSpecificPlugin" xml:space="preserve">
+    <value>Select a specific plugin (not All Plugins) to import leveled lists.</value>
+  </data>
+  <data name="Msg_ImportingLeveledLists" xml:space="preserve">
+    <value>Importing leveled lists from {0}...</value>
+  </data>
+  <data name="Msg_NoLeveledListsFound" xml:space="preserve">
+    <value>No leveled lists found in {0}.</value>
+  </data>
+  <data name="Msg_ImportedLeveledLists" xml:space="preserve">
+    <value>Imported {0} leveled list(s) from {1}.</value>
+  </data>
+  <data name="Msg_AllListsLoaded" xml:space="preserve">
+    <value>All leveled lists from {0} are already loaded.</value>
+  </data>
+  <data name="Msg_FailedOpenLogFile" xml:space="preserve">
+    <value>Failed to open log file: {0}</value>
+  </data>
+  <data name="Msg_LogFileNotExist" xml:space="preserve">
+    <value>Today's log file does not exist yet:&#10;{0}</value>
+  </data>
+  <data name="Msg_LogFileNotFoundTitle" xml:space="preserve">
+    <value>Log File Not Found</value>
+  </data>
+  <data name="Msg_FailedOpenLogsFolder" xml:space="preserve">
+    <value>Failed to open logs folder: {0}</value>
+  </data>
+  <data name="Msg_LogsFolderNotExist" xml:space="preserve">
+    <value>Logs folder does not exist:&#10;{0}</value>
+  </data>
+  <data name="Msg_FolderNotFoundTitle" xml:space="preserve">
+    <value>Folder Not Found</value>
+  </data>
+  <data name="Msg_FormatChangePrompt" xml:space="preserve">
+    <value>Enabling chance-based distribution will change the file format to SPID.&#10;&#10;SkyPatcher does not support chance-based outfit distribution. The file will be saved in SPID format to support this feature.&#10;&#10;Do you want to continue?</value>
+  </data>
+  <data name="Msg_FormatChangeTitle" xml:space="preserve">
+    <value>Format Change Required</value>
+  </data>
+  <data name="Msg_WritingPatch" xml:space="preserve">
+    <value>Writing patch file...</value>
+  </data>
+  <data name="Msg_RefreshingLoadOrder" xml:space="preserve">
+    <value>Refreshing load order...</value>
+  </data>
+  <data name="Msg_NoValidMatches" xml:space="preserve">
+    <value>No valid matches to patch.</value>
+  </data>
+  <data name="Msg_PatchingArmor" xml:space="preserve">
+    <value>Patching {0}...</value>
+  </data>
+  <data name="Msg_PatchCreated" xml:space="preserve">
+    <value>Successfully created patch with {0} armor(s) at {1}</value>
+  </data>
+  <data name="Msg_WritingOutfit" xml:space="preserve">
+    <value>Writing outfit {0}...</value>
+  </data>
+  <data name="Msg_WritingLeveledList" xml:space="preserve">
+    <value>Writing leveled list {0}...</value>
+  </data>
+  <data name="Msg_SavedTo" xml:space="preserve">
+    <value>Saved {0} to {1}</value>
+  </data>
+  <data name="Msg_OutfitsCount" xml:space="preserve">
+    <value>{0} outfit(s)</value>
+  </data>
+  <data name="Msg_LeveledListsCount" xml:space="preserve">
+    <value>{0} leveled list(s)</value>
+  </data>
+  <data name="Msg_ListJoin" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="Msg_ZeroRecords" xml:space="preserve">
+    <value>0 records</value>
+  </data>
+  <data name="Msg_MutagenNotInitialized" xml:space="preserve">
+    <value>Mutagen service is not initialized. Please set the Skyrim data path first.</value>
+  </data>
+  <data name="Msg_InvalidPluginName" xml:space="preserve">
+    <value>'{0}' is not a valid plugin name. The patch file name must end in .esp, .esm, or .esl.</value>
+  </data>
+  <data name="Msg_CannotWriteFileLocked" xml:space="preserve">
+    <value>Cannot write to '{0}'. The file may be locked by another program (Skyrim, xEdit, etc). Please close any programs that might have it open and try again.</value>
+  </data>
+  <data name="Msg_CannotWriteFile" xml:space="preserve">
+    <value>Cannot write to '{0}': {1}. The file may be locked by another program.</value>
+  </data>
+  <data name="Msg_CannotWriteUnknown" xml:space="preserve">
+    <value>Cannot write to '{0}': Unknown error.</value>
+  </data>
+  <data name="Msg_RemovedOutfitsMissingMasters" xml:space="preserve">
+    <value>Successfully removed {0} outfit(s) with missing masters.</value>
+  </data>
+  <data name="Msg_PatchFileNotExist" xml:space="preserve">
+    <value>Patch file does not exist.</value>
+  </data>
+  <data name="Msg_ErrorCleaningPatch" xml:space="preserve">
+    <value>Error cleaning patch: {0}</value>
+  </data>
+  <data name="Msg_UpdateDownloadFailed" xml:space="preserve">
+    <value>Failed to download update: {0}</value>
+  </data>
+  <data name="Msg_UpdateErrorTitle" xml:space="preserve">
+    <value>Update Error</value>
+  </data>
+  <data name="Msg_LatestVersion" xml:space="preserve">
+    <value>You are running the latest version.</value>
+  </data>
+  <data name="Msg_NoUpdateTitle" xml:space="preserve">
+    <value>No Update Available</value>
+  </data>
+  <data name="Msg_AutosaveNoticeBody" xml:space="preserve">
+    <value>Auto-save for distribution files has been removed.&#10;&#10;Distribution files are now only saved when you explicitly click Save. A rotating backup is created automatically before each save, stored in:&#10;%LOCALAPPDATA%\Boutique\Backups\&#10;&#10;This change prevents the silent data loss some users experienced with auto-save.</value>
+  </data>
+  <data name="Msg_AutosaveNoticeTitle" xml:space="preserve">
+    <value>Distribution File Auto-Save Removed</value>
+  </data>
 </root>
