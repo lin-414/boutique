@@ -74,7 +74,7 @@ public static class NpcDataBuilder
     }
   }
 
-  public static (List<NpcFilterData> FilterData, List<NpcRecordViewModel> ViewModels) LoadNpcs(
+  public static (List<NpcFilterData> FilterData, List<NpcRecordViewModel> ViewModels, int ParseFailures) LoadNpcs(
     ILinkCache<ISkyrimMod, ISkyrimModGetter> linkCache,
     Dictionary<FormKey, string> keywordLookup,
     Dictionary<FormKey, string> factionLookup,
@@ -91,10 +91,12 @@ public static class NpcDataBuilder
     var validNpcs = linkCache.WinningContextOverrides<INpc, INpcGetter>(linkCache)
                              .Where(ctx => ctx.Record.FormKey != FormKey.Null &&
                                            !string.IsNullOrWhiteSpace(ctx.Record.EditorID) &&
-                                           !isBlacklisted(ctx.Record.FormKey.ModKey));
+                                           !isBlacklisted(ctx.Record.FormKey.ModKey) &&
+                                           !isBlacklisted(ctx.ModKey));
 
     var filterDataBag = new ConcurrentBag<NpcFilterData>();
     var recordsBag    = new ConcurrentBag<NpcRecordViewModel>();
+    var parseFailures = 0;
 
     Parallel.ForEach(
       validNpcs,
@@ -123,6 +125,10 @@ public static class NpcDataBuilder
           {
             filterDataBag.Add(filterData);
           }
+          else
+          {
+            Interlocked.Increment(ref parseFailures);
+          }
 
           var record = new NpcRecord(
             npc.FormKey,
@@ -133,11 +139,11 @@ public static class NpcDataBuilder
         }
         catch
         {
-          // ignored
+          Interlocked.Increment(ref parseFailures);
         }
       });
 
-    return ([.. filterDataBag], [.. recordsBag]);
+    return ([.. filterDataBag], [.. recordsBag], parseFailures);
   }
 
   private static NpcFilterData? BuildNpcFilterData(
