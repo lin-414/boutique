@@ -79,10 +79,9 @@
                         <TextBlock Foreground="{StaticResource Brush.TextSecondary}"
                                    FontSize="12">
                           <TextBlock.Text>
-                            <MultiBinding Converter="{StaticResource FormatConverter}">
-                              <lex:Loc Key="{x:Static res:LocalizationKeys+MissingMasters.OrphanedFormat}" />
-                              <Binding Path="OrphanedCount" />
-                            </MultiBinding>
+                            <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="MissingMasters_OrphanedFormat">
+                  <Binding Path="OrphanedCount" />
+                </MultiBinding>
                           </TextBlock.Text>
                         </TextBlock>
                       </StackPanel>

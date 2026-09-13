@@ -54,10 +54,8 @@
             <TextBlock
               FontStyle="Italic" Foreground="{StaticResource Brush.TextDisabled}" Margin="0,0,0,4">
               <TextBlock.Text>
-                <MultiBinding Converter="{StaticResource FormatConverter}">
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.TargetFormat}" />
+                <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_TargetFormat|View_TargetNone">
                   <Binding Path="SelectedEntry.TargetDisplayName" />
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.TargetNone}" />
                 </MultiBinding>
               </TextBlock.Text>
             </TextBlock>

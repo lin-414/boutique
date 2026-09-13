@@ -1,44 +1,92 @@
 using System.Globalization;
 using System.Windows.Data;
+using Boutique.Resources;
 
 namespace Boutique.Views;
 
 /// <summary>
-///   Formats localized composite-format strings with one or more bound values.
-///   values[0] is the localized format string (e.g. via lex:Loc), values[1..] are the arguments.
-///   When values[1] is null or empty and an optional values[2] is supplied, that fallback text
-///   is returned instead, preserving "empty state" behavior of StringFormat bindings.
+///   Formats a localized composite-format string with one or more values.
+///   The format string is NOT passed through the binding pipeline (markup extensions cannot
+///   appear inside a MultiBinding's child collection, which only accepts BindingBase).
+///   Instead <paramref name="parameter" /> carries pipe-separated resource keys:
+///   the first segment is the format key; remaining segments are context-dependent:
+///   <list type="bullet">
+///     <item>When used as IMultiValueConverter with bindings, segment 2 is the optional
+///       "empty state" key returned when every bound value is null or empty.</item>
+///     <item>When used as IValueConverter with a null-source binding (no bound values),
+///       segments 2.. are resource-key arguments, each resolved against the resource table
+///       (segments that resolve to no resource are treated as literal text).</item>
+///   </list>
 /// </summary>
-public class FormatConverter : IMultiValueConverter
+public class FormatConverter : IValueConverter, IMultiValueConverter
 {
-  public object Convert(object?[]? values, Type targetType, object? parameter, CultureInfo culture)
+  private static string? ResolveSegment(string segment) =>
+    Strings.ResourceManager.GetString(segment, Strings.Culture) ?? segment;
+
+  public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
   {
-    if (values == null || values.Length == 0 || values[0] is not string format)
+    if (parameter is not string param)
     {
       return string.Empty;
     }
 
-    if (values.Length < 2 || values[1] is null or string { Length: 0 })
+    var segments = param.Split('|');
+    var format = ResolveSegment(segments[0]);
+
+    if (segments.Length == 1)
     {
-      return values.Length > 2 && values[2] is string fallback ? fallback : string.Empty;
+      return format;
     }
 
-    var args = new object[values.Length - 1];
-    for (var i = 1; i < values.Length; i++)
+    var args = new object[segments.Length - 1];
+    for (var i = 1; i < segments.Length; i++)
     {
-      args[i - 1] = values[i] ?? string.Empty;
+      args[i - 1] = ResolveSegment(segments[i]);
     }
 
+    return TryFormat(format, args);
+  }
+
+  public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) =>
+    throw new NotSupportedException();
+
+  public object Convert(object?[]? values, Type targetType, object? parameter, CultureInfo culture)
+  {
+    if (parameter is not string param)
+    {
+      return string.Empty;
+    }
+
+    var segments = param.Split('|');
+    var format = ResolveSegment(segments[0]);
+
+    if (values == null || values.Length == 0)
+    {
+      return format;
+    }
+
+    if (values.All(v => v is null or string { Length: 0 }))
+    {
+      return segments.Length > 1
+               ? Strings.ResourceManager.GetString(segments[1], Strings.Culture) ?? string.Empty
+               : string.Empty;
+    }
+
+    return TryFormat(format, values);
+  }
+
+  public object[] ConvertBack(object? value, Type[] targetTypes, object? parameter, CultureInfo culture) =>
+    throw new NotSupportedException();
+
+  private static object TryFormat(string format, object?[] args)
+  {
     try
     {
-      return string.Format(culture, format, args);
+      return string.Format(CultureInfo.CurrentCulture, format, args);
     }
     catch (FormatException)
     {
       return format;
     }
   }
-
-  public object[] ConvertBack(object? value, Type[] targetTypes, object? parameter, CultureInfo culture) =>
-    throw new NotSupportedException();
 }

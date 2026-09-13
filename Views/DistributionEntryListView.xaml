@@ -171,8 +171,7 @@
                        FontWeight="SemiBold"
                        VerticalAlignment="Center">
               <TextBlock.Text>
-                <MultiBinding Converter="{StaticResource FormatConverter}">
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.IntraFileOverlapsFormat}" />
+                <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_IntraFileOverlapsFormat">
                   <Binding Path="IntraFileOverlapCount" />
                 </MultiBinding>
               </TextBlock.Text>
@@ -190,11 +189,9 @@
         <Button Content="{lex:Loc Key={x:Static res:LocalizationKeys+Distribution.PasteFilter}}"
                 Command="{Binding PasteFilterToEntryCommand}" Padding="8,2">
           <Button.ToolTip>
-            <MultiBinding Converter="{StaticResource FormatConverter}"
-                          FallbackValue="{lex:Loc Key={x:Static res:LocalizationKeys+Distribution.PasteFilterTooltip}}">
-              <lex:Loc Key="{x:Static res:LocalizationKeys+Distribution.PasteFilterFormat}" />
-              <Binding Path="CopiedFilter.Description" />
-            </MultiBinding>
+            <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="Distribution_PasteFilterFormat">
+                  <Binding Path="CopiedFilter.Description" />
+                </MultiBinding>
           </Button.ToolTip>
         </Button>
       </StackPanel>

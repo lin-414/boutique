@@ -244,10 +244,7 @@
                           SelectedValue="{Binding FactionLogicMode, Mode=TwoWay}"
                           SelectedValuePath="Tag">
                   <ComboBox.ToolTip>
-                    <MultiBinding Converter="{StaticResource FormatConverter}">
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+View.AndOrLogicFormat}" />
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+Tabs.Factions}" />
-                    </MultiBinding>
+                    <Binding Source="{x:Null}" Converter="{StaticResource FormatConverter}" ConverterParameter="View_AndOrLogicFormat|Tab_Factions" />
                   </ComboBox.ToolTip>
                   <ComboBoxItem Content="AND" Tag="{x:Static models:FilterLogicMode.And}" />
                   <ComboBoxItem Content="OR" Tag="{x:Static models:FilterLogicMode.Or}" />
@@ -309,10 +306,7 @@
                           SelectedValue="{Binding KeywordLogicMode, Mode=TwoWay}"
                           SelectedValuePath="Tag">
                   <ComboBox.ToolTip>
-                    <MultiBinding Converter="{StaticResource FormatConverter}">
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+View.AndOrLogicFormat}" />
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+Tabs.Keywords}" />
-                    </MultiBinding>
+                    <Binding Source="{x:Null}" Converter="{StaticResource FormatConverter}" ConverterParameter="View_AndOrLogicFormat|Tab_Keywords" />
                   </ComboBox.ToolTip>
                   <ComboBoxItem Content="AND" Tag="{x:Static models:FilterLogicMode.And}" />
                   <ComboBoxItem Content="OR" Tag="{x:Static models:FilterLogicMode.Or}" />
@@ -374,10 +368,7 @@
                           SelectedValue="{Binding RaceLogicMode, Mode=TwoWay}"
                           SelectedValuePath="Tag">
                   <ComboBox.ToolTip>
-                    <MultiBinding Converter="{StaticResource FormatConverter}">
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+View.AndOrLogicFormat}" />
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+Tabs.Races}" />
-                    </MultiBinding>
+                    <Binding Source="{x:Null}" Converter="{StaticResource FormatConverter}" ConverterParameter="View_AndOrLogicFormat|Tab_Races" />
                   </ComboBox.ToolTip>
                   <ComboBoxItem Content="AND" Tag="{x:Static models:FilterLogicMode.And}" />
                   <ComboBoxItem Content="OR" Tag="{x:Static models:FilterLogicMode.Or}" />
@@ -439,10 +430,7 @@
                           SelectedValue="{Binding ClassLogicMode, Mode=TwoWay}"
                           SelectedValuePath="Tag">
                   <ComboBox.ToolTip>
-                    <MultiBinding Converter="{StaticResource FormatConverter}">
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+View.AndOrLogicFormat}" />
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+Tabs.Classes}" />
-                    </MultiBinding>
+                    <Binding Source="{x:Null}" Converter="{StaticResource FormatConverter}" ConverterParameter="View_AndOrLogicFormat|Tab_Classes" />
                   </ComboBox.ToolTip>
                   <ComboBoxItem Content="AND" Tag="{x:Static models:FilterLogicMode.And}" />
                   <ComboBoxItem Content="OR" Tag="{x:Static models:FilterLogicMode.Or}" />
@@ -487,10 +475,7 @@
                           SelectedValue="{Binding LocationLogicMode, Mode=TwoWay}"
                           SelectedValuePath="Tag">
                   <ComboBox.ToolTip>
-                    <MultiBinding Converter="{StaticResource FormatConverter}">
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+View.AndOrLogicFormat}" />
-                      <lex:Loc Key="{x:Static res:LocalizationKeys+Tabs.Locations}" />
-                    </MultiBinding>
+                    <Binding Source="{x:Null}" Converter="{StaticResource FormatConverter}" ConverterParameter="View_AndOrLogicFormat|Tab_Locations" />
                   </ComboBox.ToolTip>
                   <ComboBoxItem Content="AND" Tag="{x:Static models:FilterLogicMode.And}" />
                   <ComboBoxItem Content="OR" Tag="{x:Static models:FilterLogicMode.Or}" />
@@ -610,10 +595,9 @@
                      Margin="0,6,0,0" FontSize="{DynamicResource FontSize.Small}"
                      Foreground="{StaticResource Brush.TextSecondary}">
             <TextBlock.Text>
-              <MultiBinding Converter="{StaticResource FormatConverter}">
-                <lex:Loc Key="{x:Static res:LocalizationKeys+View.TotalNpcsFormat}" />
-                <Binding Path="MatchingNpcsCount" />
-              </MultiBinding>
+              <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_TotalNpcsFormat">
+                  <Binding Path="MatchingNpcsCount" />
+                </MultiBinding>
             </TextBlock.Text>
           </TextBlock>
 

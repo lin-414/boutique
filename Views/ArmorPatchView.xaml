@@ -72,8 +72,7 @@
             <TextBox Width="200" Text="{Binding SourceSearchText, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Margin="8,0,0,0" VerticalAlignment="Center">
               <TextBlock.Text>
-                <MultiBinding Converter="{StaticResource FormatConverter}">
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.ArmorsFormat}" />
+                <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_ArmorsFormat">
                   <Binding Path="SourceArmorsTotalCount" />
                 </MultiBinding>
               </TextBlock.Text>
@@ -138,10 +137,9 @@
               <TextBox Width="200" Text="{Binding TargetSearchText, UpdateSourceTrigger=PropertyChanged}" />
               <TextBlock Margin="8,0,0,0" VerticalAlignment="Center">
                 <TextBlock.Text>
-                  <MultiBinding Converter="{StaticResource FormatConverter}">
-                    <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.CandidatesFormat}" />
-                    <Binding Path="TargetArmorsTotalCount" />
-                  </MultiBinding>
+                  <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_CandidatesFormat">
+                  <Binding Path="TargetArmorsTotalCount" />
+                </MultiBinding>
                 </TextBlock.Text>
               </TextBlock>
             </StackPanel>
@@ -153,10 +151,9 @@
                       Command="{Binding MapSelectedAsGlamOnlyCommand}" />
               <TextBlock Margin="8,0,0,0" VerticalAlignment="Center">
                 <TextBlock.Text>
-                  <MultiBinding Converter="{StaticResource FormatConverter}">
-                    <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.MappingsFormat}" />
-                    <Binding Path="Matches.Count" />
-                  </MultiBinding>
+                  <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_MappingsFormat">
+                  <Binding Path="Matches.Count" />
+                </MultiBinding>
                 </TextBlock.Text>
               </TextBlock>
             </StackPanel>
@@ -217,10 +214,9 @@
           </Grid.ColumnDefinitions>
           <TextBlock FontWeight="Bold" VerticalAlignment="Center">
             <TextBlock.Text>
-              <MultiBinding Converter="{StaticResource FormatConverter}">
-                <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.TotalMappingsFormat}" />
-                <Binding Path="Matches.Count" />
-              </MultiBinding>
+              <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_TotalMappingsFormat">
+                  <Binding Path="Matches.Count" />
+                </MultiBinding>
             </TextBlock.Text>
           </TextBlock>
           <Button Grid.Column="1" Content="{lex:Loc Key={x:Static res:LocalizationKeys+Buttons.ClearAll}}"
@@ -290,11 +286,10 @@
                           </Style>
                         </Run.Style>
                         <Run.Text>
-                          <MultiBinding Converter="{StaticResource FormatConverter}">
-                            <lex:Loc Key="{x:Static res:LocalizationKeys+View.ArValFormat}" />
-                            <Binding Path="Target.ArmorRating" Mode="OneWay" />
-                            <Binding Path="Target.Value" Mode="OneWay" />
-                          </MultiBinding>
+                          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_ArValFormat">
+                  <Binding Path="Target.ArmorRating" Mode="OneWay" />
+                  <Binding Path="Target.Value" Mode="OneWay" />
+                </MultiBinding>
                         </Run.Text>
                       </Run>
                     </TextBlock>
@@ -323,10 +318,9 @@
       <TextBlock Grid.Column="0"
                  VerticalAlignment="Center">
         <TextBlock.Text>
-          <MultiBinding Converter="{StaticResource FormatConverter}">
-            <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.MappingsQueuedFormat}" />
-            <Binding Path="Matches.Count" />
-          </MultiBinding>
+          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_MappingsQueuedFormat">
+                  <Binding Path="Matches.Count" />
+                </MultiBinding>
         </TextBlock.Text>
       </TextBlock>
       <Button Grid.Column="1" Content="{lex:Loc Key={x:Static res:LocalizationKeys+ArmorPatch.CreatePatch}}"

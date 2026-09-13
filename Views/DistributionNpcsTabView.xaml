@@ -296,10 +296,9 @@
                                    Foreground="{StaticResource Brush.Conflict}" FontSize="{DynamicResource FontSize.Small}" VerticalAlignment="Center" Margin="4,0,0,0"
                                    Visibility="{Binding Chance, Converter={StaticResource InequalityToVisConverter}, ConverterParameter=100}">
                           <TextBlock.Text>
-                            <MultiBinding Converter="{StaticResource FormatConverter}">
-                              <lex:Loc Key="{x:Static res:LocalizationKeys+NpcTab.ChanceFormat}" />
-                              <Binding Path="Chance" />
-                            </MultiBinding>
+                            <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="NPCs_ChanceFormat">
+                  <Binding Path="Chance" />
+                </MultiBinding>
                           </TextBlock.Text>
                         </TextBlock>
                       </StackPanel>
@@ -310,10 +309,9 @@
                       <TextBlock Grid.Column="0" Grid.Row="1"
                                  FontFamily="{StaticResource Font.Mono}" FontSize="{DynamicResource FontSize.Small}" Margin="0,2,0,0">
                         <TextBlock.Text>
-                          <MultiBinding Converter="{StaticResource FormatConverter}">
-                            <lex:Loc Key="{x:Static res:LocalizationKeys+NpcTab.OutfitFormat}" />
-                            <Binding Path="OutfitEditorId" />
-                          </MultiBinding>
+                          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="NPCs_OutfitFormat">
+                  <Binding Path="OutfitEditorId" />
+                </MultiBinding>
                         </TextBlock.Text>
                       </TextBlock>
                       <TextBlock Grid.Column="0" Grid.Row="2" Text="{Binding TargetingDescription}"
@@ -493,10 +491,9 @@
                       <TextBlock Text="{Binding FactionEditorId}" FontSize="{DynamicResource FontSize.Small}" />
                       <TextBlock Margin="3,0,0,0" FontSize="{DynamicResource FontSize.Small}" Foreground="{StaticResource Brush.TextDisabled}">
                         <TextBlock.Text>
-                          <MultiBinding Converter="{StaticResource FormatConverter}">
-                            <lex:Loc Key="{x:Static res:LocalizationKeys+NpcTab.RankFormat}" />
-                            <Binding Path="Rank" />
-                          </MultiBinding>
+                          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="NPCs_RankFormat">
+                  <Binding Path="Rank" />
+                </MultiBinding>
                         </TextBlock.Text>
                       </TextBlock>
                     </StackPanel>

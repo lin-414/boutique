@@ -201,10 +201,9 @@
                         <TextBlock Style="{DynamicResource {x:Static themes:ResourceKeys.SecondaryTextStyleKey}}"
                                    Margin="8,0,0,0">
                           <TextBlock.Text>
-                            <MultiBinding Converter="{StaticResource FormatConverter}">
-                              <lex:Loc Key="{x:Static res:LocalizationKeys+View.NpcCountFormat}" />
-                              <Binding Path="NpcCount" />
-                            </MultiBinding>
+                            <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_NpcCountFormat">
+                  <Binding Path="NpcCount" />
+                </MultiBinding>
                           </TextBlock.Text>
                         </TextBlock>
                       </StackPanel>

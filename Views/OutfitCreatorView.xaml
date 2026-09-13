@@ -117,10 +117,9 @@
                                    VerticalAlignment="Center"
                                    Visibility="{Binding IsExpanded, Converter={StaticResource InverseBoolToVisConverter}}">
                           <TextBlock.Text>
-                            <MultiBinding Converter="{StaticResource FormatConverter}">
-                              <lex:Loc Key="{x:Static res:LocalizationKeys+View.PiecesFormat}" />
-                              <Binding Path="PieceCount" />
-                            </MultiBinding>
+                            <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_PiecesFormat">
+                  <Binding Path="PieceCount" />
+                </MultiBinding>
                           </TextBlock.Text>
                         </TextBlock>
                       </StackPanel>
@@ -444,10 +443,9 @@
               <TextBlock Grid.Column="2"
                          Margin="8,0,0,0" VerticalAlignment="Center">
                 <TextBlock.Text>
-                  <MultiBinding Converter="{StaticResource FormatConverter}">
-                    <lex:Loc Key="{x:Static res:LocalizationKeys+ArmorPatch.ArmorsFormat}" />
-                    <Binding Path="OutfitArmorsTotalCount" />
-                  </MultiBinding>
+                  <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="ArmorPatch_ArmorsFormat">
+                  <Binding Path="OutfitArmorsTotalCount" />
+                </MultiBinding>
                 </TextBlock.Text>
               </TextBlock>
             </Grid>
@@ -580,10 +578,9 @@
               <TextBlock
                 FontWeight="Bold" Margin="0,0,0,6">
                 <TextBlock.Text>
-                  <MultiBinding Converter="{StaticResource FormatConverter}">
-                    <lex:Loc Key="{x:Static res:LocalizationKeys+OutfitCreator.ExistingOutfitsFormat}" />
-                    <Binding Path="ExistingOutfits.Count" />
-                  </MultiBinding>
+                  <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="OutfitCreator_ExistingOutfitsFormat">
+                  <Binding Path="ExistingOutfits.Count" />
+                </MultiBinding>
                 </TextBlock.Text>
               </TextBlock>
               <ScrollViewer MaxHeight="120" VerticalScrollBarVisibility="Auto">
@@ -854,10 +851,9 @@
       <TextBlock Grid.Column="0"
                  VerticalAlignment="Center">
         <TextBlock.Text>
-          <MultiBinding Converter="{StaticResource FormatConverter}">
-            <lex:Loc Key="{x:Static res:LocalizationKeys+View.ItemsCountFormat}" />
-            <Binding Path="OutfitDrafts.Count" />
-          </MultiBinding>
+          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_ItemsCountFormat">
+                  <Binding Path="OutfitDrafts.Count" />
+                </MultiBinding>
         </TextBlock.Text>
       </TextBlock>
       <Button Grid.Column="1" Content="{lex:Loc Key={x:Static res:LocalizationKeys+View.AddSeparator}}" Click="AddSeparator_Click"

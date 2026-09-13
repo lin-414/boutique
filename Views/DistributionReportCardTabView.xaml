@@ -199,14 +199,13 @@
                  Visibility="{Binding HasResults, Converter={StaticResource BoolToVis}}"
                  Foreground="{DynamicResource {x:Static utilities:ResourceKeys.BrushTextSecondary}}">
         <TextBlock.Text>
-          <MultiBinding Converter="{StaticResource FormatConverter}">
-            <lex:Loc Key="{x:Static res:LocalizationKeys+View.CoverageSummaryFormat}" />
-            <Binding Path="CoveredNpcCount" />
-            <Binding Path="EligibleNpcCount" />
-            <Binding Path="UsedModOutfitCount" />
-            <Binding Path="ModOutfitCount" />
-            <Binding Path="UniqueOutfitCount" />
-          </MultiBinding>
+          <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_CoverageSummaryFormat">
+                  <Binding Path="CoveredNpcCount" />
+                  <Binding Path="EligibleNpcCount" />
+                  <Binding Path="UsedModOutfitCount" />
+                  <Binding Path="ModOutfitCount" />
+                  <Binding Path="UniqueOutfitCount" />
+                </MultiBinding>
         </TextBlock.Text>
       </TextBlock>
     </StackPanel>
@@ -305,8 +304,7 @@
           <Expander.Header>
             <TextBlock FontWeight="SemiBold">
               <TextBlock.Text>
-                <MultiBinding Converter="{StaticResource FormatConverter}">
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.UnusedOutfitsFormat}" />
+                <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_UnusedOutfitsFormat">
                   <Binding Path="UnusedOutfits.Count" />
                 </MultiBinding>
               </TextBlock.Text>
@@ -343,8 +341,7 @@
           <Expander.Header>
             <TextBlock FontWeight="SemiBold">
               <TextBlock.Text>
-                <MultiBinding Converter="{StaticResource FormatConverter}">
-                  <lex:Loc Key="{x:Static res:LocalizationKeys+View.UnusedArmorsFormat}" />
+                <MultiBinding Converter="{StaticResource FormatConverter}" ConverterParameter="View_UnusedArmorsFormat">
                   <Binding Path="UnusedArmors.Count" />
                 </MultiBinding>
               </TextBlock.Text>
