@@ -32,13 +32,18 @@ public sealed class MutagenService(ILoggingService loggingService, PatcherSettin
 
   public string? DataFolderPath { get; private set; }
 
+  private static readonly StringsReadParameters StringsReadParams = new()
+  {
+    // NonLocalizedEncodingOverride only covers strings embedded in plugin files; .strings file
+    // decoding goes through EncodingProvider. Mutagen's default English encoding there is plain
+    // CP1252, which garbles Chinese localisation packs that ship UTF-8 under English file names.
+    NonLocalizedEncodingOverride = MutagenEncoding._utf8,
+    EncodingProvider             = Utf8FirstStringsEncodingProvider.Instance
+  };
+
   public BinaryReadParameters Utf8ReadParameters { get; } = new()
                                                             {
-                                                              StringsParam =
-                                                                new StringsReadParameters
-                                                                {
-                                                                  NonLocalizedEncodingOverride = MutagenEncoding._utf8
-                                                                }
+                                                              StringsParam = StringsReadParams
                                                             };
 
   public bool IsInitialized => _environment != null;
@@ -152,11 +157,11 @@ public sealed class MutagenService(ILoggingService loggingService, PatcherSettin
 
     _environment = string.IsNullOrEmpty(explicitDataPath)
                      ? GameEnvironment.Typical.Builder<ISkyrimMod, ISkyrimModGetter>(GetGameRelease())
-                                      .WithUtf8Encoding()
+                                      .WithStringParameters(StringsReadParams)
                                       .Build()
                      : GameEnvironment.Typical.Builder<ISkyrimMod, ISkyrimModGetter>(GetGameRelease())
                                       .WithTargetDataFolder(new DirectoryPath(explicitDataPath))
-                                      .WithUtf8Encoding()
+                                      .WithStringParameters(StringsReadParams)
                                       .Build();
 
     LinkCache = _environment.LoadOrder.ToImmutableLinkCache();
