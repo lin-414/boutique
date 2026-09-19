@@ -1,3 +1,4 @@
+using Boutique.Utilities;
 using Mutagen.Bethesda.Plugins;
 using Mutagen.Bethesda.Skyrim;
 using ReactiveUI;
@@ -50,6 +51,11 @@ public partial class OutfitRecordViewModel : ReactiveObject, ISelectableRecordVi
       return true;
     }
 
-    return _searchCache.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase);
+    if (_searchCache.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase))
+    {
+      return true;
+    }
+
+    return FormKeyHelper.TryParseSearchFormId(searchTerm, out var formId) && FormKey.ID == formId;
   }
 }

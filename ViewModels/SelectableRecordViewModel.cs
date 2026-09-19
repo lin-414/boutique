@@ -1,4 +1,5 @@
 using Boutique.Models;
+using Boutique.Utilities;
 using Mutagen.Bethesda.Plugins;
 using ReactiveUI;
 using ReactiveUI.SourceGenerators;
@@ -29,6 +30,13 @@ public partial class SelectableRecordViewModel<TRecord>(TRecord record) : Reacti
     }
 
     _searchCache ??= $"{DisplayName} {EditorID} {ModDisplayName} {FormKeyString}".ToLowerInvariant();
-    return _searchCache.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase);
+    if (_searchCache.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase))
+    {
+      return true;
+    }
+
+    // Accept form ids in any common format ("0x00020546", "00020546", "20546") that the
+    // Mutagen display string ("020546:Skyrim.esm") cannot match as a plain substring.
+    return FormKeyHelper.TryParseSearchFormId(searchTerm, out var formId) && FormKey.ID == formId;
   }
 }

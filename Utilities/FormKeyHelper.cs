@@ -133,6 +133,21 @@ public static class FormKeyHelper
     return uint.TryParse(trimmed, NumberStyles.HexNumber, null, out id);
   }
 
+  /// <summary>
+  ///   Parses a loose form-id search term ("0x00020546", "00020546", "20546") into its numeric id
+  ///   so search can match records by FormKey.ID regardless of display formatting.
+  /// </summary>
+  public static bool TryParseSearchFormId(string text, out uint formId)
+  {
+    formId = 0;
+    if (!LooksLikeFormId(text))
+    {
+      return false;
+    }
+
+    return uint.TryParse(StripHexPrefix(text.Trim()), NumberStyles.HexNumber, null, out formId);
+  }
+
   public static bool TryParseEditorIdReference(string identifier, out ModKey? modKey, out string editorId)
   {
     modKey   = null;

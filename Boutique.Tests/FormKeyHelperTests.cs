@@ -493,4 +493,41 @@ public class FormKeyHelperTests
     }
 
     #endregion
+
+    #region TryParseSearchFormId - loose search-term parsing
+
+    [Theory]
+    [InlineData("0x00020546", 0x20546u)]
+    [InlineData("0X00020546", 0x20546u)]
+    [InlineData("00020546", 0x20546u)]
+    [InlineData("20546", 0x20546u)]
+    [InlineData("020546", 0x20546u)]
+    [InlineData("0xAbCd", 0xABCDu)]
+    [InlineData("dead", 0xDEADu)]
+    [InlineData("FFFFFFFF", 0xFFFFFFFFu)]
+    public void TryParseSearchFormId_HexLikeTerms_ParsesNumericId(string input, uint expectedId)
+    {
+        var success = FormKeyHelper.TryParseSearchFormId(input, out var formId);
+
+        success.Should().BeTrue();
+        formId.Should().Be(expectedId);
+    }
+
+    [Theory]
+    [InlineData("Skyrim.esm")]
+    [InlineData("Bandit")]
+    [InlineData("")]
+    [InlineData("   ")]
+    [InlineData("0x")]
+    [InlineData("00000000020546")]
+    [InlineData("xyz")]
+    public void TryParseSearchFormId_NonHexTerms_ReturnsFalse(string input)
+    {
+        var success = FormKeyHelper.TryParseSearchFormId(input, out var formId);
+
+        success.Should().BeFalse();
+        formId.Should().Be(0u);
+    }
+
+    #endregion
 }

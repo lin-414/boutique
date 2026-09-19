@@ -156,7 +156,12 @@ public sealed partial class DistributionNpcsTabViewModel : ReactiveObject, IDisp
           assignment.FormKeyString.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
           assignment.ModDisplayName.Contains(searchText, StringComparison.OrdinalIgnoreCase);
 
-        if (!matchesText)
+        // Accept form ids in any common format ("0x00020546", "00020546", "20546") that the
+        // Mutagen display string ("020546:Skyrim.esm") cannot match as a plain substring.
+        var matchesFormId = FormKeyHelper.TryParseSearchFormId(searchText, out var searchFormId) &&
+                            assignment.NpcFormKey.ID == searchFormId;
+
+        if (!matchesText && !matchesFormId)
         {
           return false;
         }
