@@ -1313,6 +1313,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>Haga clic para alternar la negación</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>grupo</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>Añadido automáticamente: este PNJ comparte el grupo de plantillas {0} con el PNJ elegido; el juego sortea un miembro por actor.</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>Y: Todos los {0} deben coincidir | O: Al menos un {0} debe coincidir</value>
   </data>

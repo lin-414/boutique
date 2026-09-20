@@ -504,6 +504,8 @@ public static class LocalizationKeys
     public const string Min                        = "View_Min";
     public const string Max                        = "View_Max";
     public const string ToggleNegationTooltip      = "View_ToggleNegationTooltip";
+    public const string TemplatePoolBadge          = "View_TemplatePoolBadge";
+    public const string TemplatePoolBadgeTooltip   = "View_TemplatePoolBadgeTooltip";
     public const string AndOrLogicFormat           = "View_AndOrLogicFormat";
     public const string OutfitFilters              = "View_OutfitFilters";
     public const string RawFilters                 = "View_RawFilters";

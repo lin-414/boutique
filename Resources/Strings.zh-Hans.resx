@@ -1313,6 +1313,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>点击切换取反</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>模板池</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>自动加入：该 NPC 与你所选的 NPC 共用模板池 {0}，游戏按每个 actor 随机取一个成员，所以全部成员都要分配服装。</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>AND：所有{0}都必须匹配 | OR：至少一个{0}匹配</value>
   </data>

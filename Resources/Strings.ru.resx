@@ -1313,6 +1313,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>Нажмите, чтобы переключить отрицание</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>пул</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>Добавлено автоматически: этот NPC делит пул шаблонов {0} с выбранным NPC, игра разыгрывает одного члена пула на актора.</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>И: Должны совпадать все {0} | ИЛИ: Должен совпадать хотя бы один {0}</value>
   </data>

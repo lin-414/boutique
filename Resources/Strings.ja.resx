@@ -1313,6 +1313,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>クリックで否定を切り替え</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>プール</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>自動追加：このNPCは選択したNPCとテンプレートプール {0} を共有しており、ゲームはアクターごとに1つのメンバーを抽選します。</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>AND: すべての{0}が一致する必要があります | OR: 少なくとも 1 つの{0}が一致する必要があります</value>
   </data>

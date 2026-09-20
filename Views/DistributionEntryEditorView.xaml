@@ -218,6 +218,17 @@
                           </TextBlock>
                           <TextBlock Text="{Binding DisplayName}" FontSize="{DynamicResource FontSize.Small}" VerticalAlignment="Center" />
                         </StackPanel>
+                        <TextBlock Text="{lex:Loc Key={x:Static res:LocalizationKeys+View.TemplatePoolBadge}}"
+                                   FontSize="{DynamicResource FontSize.Small}" VerticalAlignment="Center"
+                                   Foreground="{StaticResource Brush.Warning}" Margin="4,0,0,0"
+                                   Visibility="{Binding IsFromTemplatePool, Converter={StaticResource BoolToVisConverter}}">
+                          <TextBlock.ToolTip>
+                            <MultiBinding Converter="{StaticResource FormatConverter}"
+                                          ConverterParameter="View_TemplatePoolBadgeTooltip">
+                              <Binding Path="TemplatePoolEditorId" />
+                            </MultiBinding>
+                          </TextBlock.ToolTip>
+                        </TextBlock>
                         <TextBlock Text="{Binding FormKeyString}"
                                    Style="{DynamicResource {x:Static themes:ResourceKeys.FormKeyTextStyleKey}}"
                                    Margin="4,0,0,0" />

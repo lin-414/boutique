@@ -29,6 +29,12 @@ public class PreviewLine
 
 public sealed partial class DistributionEditTabViewModel : ReactiveObject, IDisposable
 {
+  /// <summary>
+  ///   Ceiling for auto expansion, so a modded pool with hundreds of members cannot silently
+  ///   produce an unusable filter line.
+  /// </summary>
+  private const int MaxTemplatePoolExpansion = 40;
+
   private readonly ArmorPreviewService                                 _armorPreviewService;
   private readonly DistributionFileBackupService                       _backupService;
   private readonly GameDataCacheService                                _cache;
@@ -762,7 +768,8 @@ public sealed partial class DistributionEditTabViewModel : ReactiveObject, IDisp
   /// <param name="filteredItems">The filtered collection to get selected items from.</param>
   /// <param name="addToEntry">Function to add an item to the entry, returns true if added.</param>
   /// <param name="itemTypeName">The display name for the item type (e.g., "NPC", "faction").</param>
-  private void AddSelectedCriteriaToEntry<T>(
+  /// <returns>The items that were not already in the entry.</returns>
+  private List<T> AddSelectedCriteriaToEntry<T>(
     IEnumerable<T> filteredItems,
     Func<DistributionEntryViewModel, T, bool> addToEntry,
     string itemTypeName)
@@ -774,7 +781,7 @@ public sealed partial class DistributionEditTabViewModel : ReactiveObject, IDisp
       if (SelectedEntry == null)
       {
         AddDistributionEntry();
-        return;
+        return [];
       }
     }
 
@@ -785,34 +792,117 @@ public sealed partial class DistributionEditTabViewModel : ReactiveObject, IDisp
     if (selectedItems.Count == 0)
     {
       StatusMessage = $"No {itemTypeName}s selected. Check the boxes next to {itemTypeName}s you want to add.";
-      return;
+      return [];
     }
 
-    var addedCount = selectedItems.Count(item => addToEntry(SelectedEntry, item));
+    var added = selectedItems.Where(item => addToEntry(SelectedEntry, item)).ToList();
 
     foreach (var item in selectedItems)
     {
       item.IsSelected = false;
     }
 
-    if (addedCount > 0)
+    if (added.Count > 0)
     {
       StatusMessage =
-        $"Added {addedCount} {itemTypeName}(s) to entry: {SelectedEntry.SelectedOutfit?.EditorID ?? "(No outfit)"}";
-      _logger.Debug("Added {Count} {ItemType}s to entry", addedCount, itemTypeName);
+        $"Added {added.Count} {itemTypeName}(s) to entry: {SelectedEntry.SelectedOutfit?.EditorID ?? "(No outfit)"}";
+      _logger.Debug("Added {Count} {ItemType}s to entry", added.Count, itemTypeName);
     }
     else
     {
       StatusMessage = $"All selected {itemTypeName}s are already in this entry.";
     }
+
+    return added;
   }
 
   [ReactiveCommand(CanExecute = nameof(_hasEntries))]
-  private void AddSelectedNpcsToEntry() =>
-    AddSelectedCriteriaToEntry(
+  private void AddSelectedNpcsToEntry()
+  {
+    var added = AddSelectedCriteriaToEntry(
       FilteredNpcs,
       (entry, npc) => entry.AddNpc(npc),
       "NPC");
+
+    if (SelectedEntry is { } entry)
+    {
+      ExpandTemplatePools(entry, added);
+    }
+  }
+
+  /// <summary>
+  ///   Adds the remaining members of every leveled actor template pool the selection touches. The
+  ///   game rolls one pool member per actor as its template, so patching only the picked member
+  ///   leaves the other rolls wearing the old outfit and the distribution reads as broken.
+  /// </summary>
+  private void ExpandTemplatePools(DistributionEntryViewModel entry, IReadOnlyList<NpcRecordViewModel> added)
+  {
+    var pools = added
+                .SelectMany(npc => _cache.GetTemplatePools(npc.FormKey))
+                .DistinctBy(pool => pool.PoolFormKey)
+                .ToList();
+
+    if (pools.Count == 0)
+    {
+      return;
+    }
+
+    var poolNames = string.Join(
+      ", ",
+      pools.Select(pool => pool.PoolEditorId).Where(id => !string.IsNullOrWhiteSpace(id)));
+
+    foreach (var npc in added.Where(npc => _cache.GetTemplatePools(npc.FormKey).Count > 0))
+    {
+      npc.TemplatePoolEditorId = poolNames;
+    }
+
+    var oversized = pools.Where(pool => pool.Members.Count > MaxTemplatePoolExpansion).ToList();
+    var members   = pools.Except(oversized).SelectMany(pool => pool.Members).Distinct().ToList();
+
+    var expandedCount = 0;
+    foreach (var memberKey in members)
+    {
+      if (_cache.LookupNpc(memberKey).Value is not { } member)
+      {
+        continue;
+      }
+
+      var sibling = new NpcRecordViewModel(
+        new NpcRecord(memberKey, member.EditorId, member.Name, member.SourceMod))
+      {
+        IsFromTemplatePool   = true,
+        TemplatePoolEditorId = poolNames
+      };
+
+      if (entry.AddNpc(sibling))
+      {
+        expandedCount++;
+      }
+    }
+
+    if (expandedCount > 0)
+    {
+      StatusMessage =
+        $"Added {expandedCount} NPC(s) from template pool {poolNames}: the game rolls one pool member " +
+        "per actor, so every member needs the outfit.";
+      _logger.Debug("Expanded {PoolCount} template pool(s) with {Count} NPC(s)", pools.Count, expandedCount);
+    }
+
+    foreach (var pool in oversized)
+    {
+      _logger.Warning(
+        "Template pool {Pool} has {MemberCount} members, above the {Max} auto expansion limit.",
+        pool.PoolEditorId ?? pool.PoolFormKey.ToString(),
+        pool.Members.Count,
+        MaxTemplatePoolExpansion);
+    }
+
+    if (oversized.Count > 0)
+    {
+      StatusMessage +=
+        $" {oversized.Count} pool(s) were left alone because they are too large to expand automatically.";
+    }
+  }
 
   [ReactiveCommand(CanExecute = nameof(_hasEntries))]
   private void AddSelectedFactionsToEntry() =>

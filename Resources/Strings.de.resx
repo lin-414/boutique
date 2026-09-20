@@ -1313,6 +1313,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>Klicken, um die Negation umzuschalten</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>Automatisch hinzugefügt: Dieser NPC teilt sich den Vorlagenpool {0} mit dem gewählten NPC; das Spiel würfelt pro Actor ein Mitglied.</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>UND: Alle {0} müssen übereinstimmen | ODER: Mindestens ein {0} muss übereinstimmen</value>
   </data>

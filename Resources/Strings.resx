@@ -1345,6 +1345,12 @@
   <data name="View_ToggleNegationTooltip" xml:space="preserve">
     <value>Click to toggle negation</value>
   </data>
+  <data name="View_TemplatePoolBadge" xml:space="preserve">
+    <value>pool</value>
+  </data>
+  <data name="View_TemplatePoolBadgeTooltip" xml:space="preserve">
+    <value>Auto-added: this NPC shares template pool {0} with the NPC you picked, and the game rolls one member per actor.</value>
+  </data>
   <data name="View_AndOrLogicFormat" xml:space="preserve">
     <value>AND: All {0} must match | OR: At least one {0} must match</value>
   </data>

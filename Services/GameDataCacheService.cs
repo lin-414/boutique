@@ -52,6 +52,9 @@ public sealed class GameDataCacheService : IDisposable
   private readonly SourceCache<RaceRecordViewModel, FormKey>   _racesSource   = new(x => x.FormKey);
   private readonly SettingsViewModel                           _settings;
 
+  private IReadOnlyDictionary<FormKey, IReadOnlyList<NpcTemplatePool>> _templatePoolsByNpc =
+    new Dictionary<FormKey, IReadOnlyList<NpcTemplatePool>>();
+
   public GameDataCacheService(
     MutagenService mutagenService,
     DistributionScannerService discoveryService,
@@ -210,6 +213,13 @@ public sealed class GameDataCacheService : IDisposable
     _blacklistedPluginsSet.Contains(modKey.FileName);
 
   public Optional<NpcFilterData> LookupNpc(FormKey key) => _npcsSource.Lookup(key);
+
+  /// <summary>
+  ///   Gets the leveled actor template pools that decide this NPC's appearance, empty when the NPC
+  ///   stands on its own. A patch on one pool member only reaches the actors that roll that member.
+  /// </summary>
+  public IReadOnlyList<NpcTemplatePool> GetTemplatePools(FormKey npcFormKey) =>
+    _templatePoolsByNpc.GetValueOrDefault(npcFormKey) ?? [];
 
   public event EventHandler? CacheLoaded;
 
@@ -372,6 +382,11 @@ public sealed class GameDataCacheService : IDisposable
           IsBlacklisted);
       });
       var (npcFilterDataList, npcRecordsList, npcParseFailures) = npcsResult;
+
+      _templatePoolsByNpc = await Task.Run(() => NpcTemplatePoolIndex.Build(linkCache, _logger));
+      _logger.Information(
+        "NPC template pools: {PoolNpcCount} NPCs share their appearance through a leveled actor list.",
+        _templatePoolsByNpc.Count);
 
       if (npcParseFailures > 0)
       {
